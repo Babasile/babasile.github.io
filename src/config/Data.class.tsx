@@ -147,31 +147,22 @@ export class Data implements Resume {
 	links: Array<Link> = [
 		{
 			name: "Linkedin",
-			pseudo: "",
 			url: "https://www.linkedin.com/in/basilebuchler/",
-			smallIcon: "",
-			largeIcon: "",
 		},
 		{
 			name: "GitHub",
 			pseudo: "Babasile",
 			url: "https://github.com/Babasile",
-			smallIcon: "",
-			largeIcon: "",
 		},
 		{
 			name: "Twitter",
 			pseudo: "@Baabasile",
 			url: "https://twitter.com/Baabasile",
-			smallIcon: "",
-			largeIcon: "",
 		},
 		{
 			name: "Instagram",
 			pseudo: "@Baabasile",
 			url: "https://www.instagram.com/baabasile/",
-			smallIcon: "",
-			largeIcon: "",
 		},
 	];
 }
