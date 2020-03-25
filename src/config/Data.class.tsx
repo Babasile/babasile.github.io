@@ -1,10 +1,10 @@
-import { Resume } from "../intefaces/Resume.interface";
-import { Link } from "../intefaces/Link.interface";
-import { Hobby } from "../intefaces/Hobby.interface";
-import { Education } from "../intefaces/Education.interface";
-import { Language } from "../intefaces/Language.interface";
-import { Role } from "../intefaces/Role.interface";
-import { Identity } from "../intefaces/Identity.interface";
+import { Resume } from "../interfaces/Resume.interface";
+import { Link } from "../interfaces/Link.interface";
+import { Hobby } from "../interfaces/Hobby.interface";
+import { Education } from "../interfaces/Education.interface";
+import { Language } from "../interfaces/Language.interface";
+import { Role } from "../interfaces/Role.interface";
+import { Identity } from "../interfaces/Identity.interface";
 
 export class Data implements Resume {
 	identity: Identity = {
