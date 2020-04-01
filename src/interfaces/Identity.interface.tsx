@@ -11,4 +11,5 @@ export interface Identity {
 	softskills: Array<string>;
 	bio: string;
 	picture: string;
+	role: string;
 }

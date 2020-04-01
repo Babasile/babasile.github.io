@@ -5,6 +5,7 @@ import { Education } from "../interfaces/Education.interface";
 import { Language } from "../interfaces/Language.interface";
 import { Role } from "../interfaces/Role.interface";
 import { Identity } from "../interfaces/Identity.interface";
+import picture from "./beardglasses.jpg";
 
 export class Data implements Resume {
 	identity: Identity = {
@@ -25,7 +26,8 @@ export class Data implements Resume {
 		additionnals: ["Permis B, véhiculé"],
 		softskills: ["Curieux"],
 		bio: "Passionné par le web et les nouvelles technologies",
-		picture: "",
+		picture: picture,
+		role: "Développeur Full-Stack",
 	};
 	skills: Map<string, Array<string>> = new Map([
 		["Programmation", ["Java", "Javascript", "Angular", "React"]],
