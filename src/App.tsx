@@ -35,6 +35,13 @@ function App() {
 function initNavLinks(resume: Data): Array<Link> {
 	let navLinks: Array<Link> = [];
 
+	if (resume.identity != null) {
+		navLinks.push({
+			name: resume.identity.firstname + " " + resume.identity.lastname,
+			url: "#bio",
+		});
+	}
+
 	if (resume.educations.length > 0) {
 		navLinks.push({
 			name: "Formations",
@@ -47,7 +54,7 @@ function initNavLinks(resume: Data): Array<Link> {
 			url: "#roles",
 		});
 	}
-	if (resume.skills.size > 0) {
+	if (resume.skills.length > 0) {
 		navLinks.push({
 			name: "Compétences",
 			url: "#skills",

@@ -4,10 +4,12 @@ import { Hobby } from "./Hobby.interface";
 import { Language } from "./Language.interface";
 import { Link } from "./Link.interface";
 import { Role } from "./Role.interface";
+import { Skill } from "./Skill.interface";
 
 export default interface Props {
+	skill?: Skill;
 	identity?: Identity;
-	skills?: Map<string, Array<string>>;
+	skills?: Array<Skill>;
 	educations?: Array<Education>;
 	hobbies?: Array<Hobby>;
 	languages?: Array<Language>;

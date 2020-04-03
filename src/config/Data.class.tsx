@@ -6,6 +6,7 @@ import { Language } from "../interfaces/Language.interface";
 import { Role } from "../interfaces/Role.interface";
 import { Identity } from "../interfaces/Identity.interface";
 import picture from "./beardglasses.jpg";
+import { Skill } from "../interfaces/Skill.interface";
 
 export class Data implements Resume {
 	identity: Identity = {
@@ -24,18 +25,39 @@ export class Data implements Resume {
 		phoneNumber: "",
 		email: "",
 		additionnals: ["Permis B, véhiculé"],
-		softskills: ["Curieux"],
-		bio: "Passionné par le web et les nouvelles technologies",
+		softskills: ["Curieux", "Rigoureux", "Travail d'équipe"],
+		bio:
+			"Je suis un développeur web passioné. J'aime la structure, l'ordre et la qualité. J'aime passer du temps à corriger les petits détails et à optimiser les applications web. J'aime aussi travailler en équipe, pour progresser et apprendre plus vite.",
 		picture: picture,
 		role: "Développeur Full-Stack",
 	};
-	skills: Map<string, Array<string>> = new Map([
-		["Programmation", ["Java", "Javascript", "Angular", "React"]],
-		["Gestion de versions", ["SVN", "GIT"]],
-		["Base de données", ["MySQL", "IBM DB2"]],
-		["Conception Web", ["HTML5", "CSS3"]],
-		["IDE", ["Eclpise", "VSCode"]],
-	]);
+	skills: Array<Skill> = [
+		{
+			name: "Programmation",
+			comment: "",
+			details: ["Java", "Javascript", "Angular", "React"],
+		},
+		{
+			name: "Gestion de versions",
+			comment: "",
+			details: ["SVN", "GIT"],
+		},
+		{
+			name: "Base de données",
+			comment: "",
+			details: ["MySQL", "IBM DB2"],
+		},
+		{
+			name: "Conception Web",
+			comment: "",
+			details: ["HTML5", "CSS3"],
+		},
+		{
+			name: "IDE",
+			comment: "",
+			details: ["Eclpise", "VSCode", "DBeaver"],
+		},
+	];
 	languages: Array<Language> = [
 		{
 			name: "Anglais",

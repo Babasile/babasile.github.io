@@ -11,14 +11,7 @@ export class Role extends React.Component<Props> {
 			</li>
 		));
 		return (
-			<Container fluid>
-				<ul>{list}</ul>
-				<ul>{list}</ul>
-				<ul>{list}</ul>
-				<ul>{list}</ul>
-				<ul>{list}</ul>
-				<ul>{list}</ul>
-				<ul>{list}</ul>
+			<Container fluid id="roles">
 				<ul>{list}</ul>
 				<ul>{list}</ul>
 				<ul>{list}</ul>

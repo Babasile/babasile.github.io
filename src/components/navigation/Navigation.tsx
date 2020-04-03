@@ -3,6 +3,7 @@ import Props from "../../interfaces/Props.interface";
 import NavState from "../../interfaces/NavState.interface";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import Scrollspy from "react-scrollspy";
 
 import styles from "./Navigation.module.css";
 
@@ -32,10 +33,18 @@ export class Navigation extends React.Component<Props, NavState> {
 		const { links, identity } = this.props;
 
 		const htmlLinks = links?.map((link, i) => (
-			<Nav.Link key={i} href={link.url}>
+			<Nav.Link
+				className={link.url === "#bio" ? "d-none" : ""}
+				key={i}
+				href={link.url}
+			>
 				{link.name}
 			</Nav.Link>
 		));
+		let spyLinks: string[] = [];
+		if (links != null) {
+			spyLinks = links.map(link => link.url.replace("#", ""));
+		}
 		let navBrand: string = "Curriculum vitæ";
 		let role = "";
 		if (identity != null) {
@@ -48,10 +57,10 @@ export class Navigation extends React.Component<Props, NavState> {
 				bg="dark"
 				variant="dark"
 				expand="md"
-				sticky="top"
+				fixed="top"
 				className="border-bottom border-warning"
 			>
-				<Navbar.Brand className="text-capitalize" href="#me">
+				<Navbar.Brand className="text-capitalize mr-0" href="#bio" id="me">
 					{navBrand}
 					<small
 						className={
@@ -64,7 +73,14 @@ export class Navigation extends React.Component<Props, NavState> {
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="ml-auto justify-content-end">{htmlLinks}</Nav>
+					<Scrollspy
+						items={spyLinks}
+						currentClassName="active"
+						className="ml-auto justify-content-end navbar-nav"
+						componentTag="div"
+					>
+						{htmlLinks}
+					</Scrollspy>
 				</Navbar.Collapse>
 			</Navbar>
 		);
