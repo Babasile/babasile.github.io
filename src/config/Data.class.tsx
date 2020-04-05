@@ -2,11 +2,10 @@ import { Resume } from "../interfaces/Resume.interface";
 import { Link } from "../interfaces/Link.interface";
 import { Hobby } from "../interfaces/Hobby.interface";
 import { Education } from "../interfaces/Education.interface";
-import { Language } from "../interfaces/Language.interface";
 import { Role } from "../interfaces/Role.interface";
 import { Identity } from "../interfaces/Identity.interface";
-import picture from "./beardglasses.jpg";
 import { Skill } from "../interfaces/Skill.interface";
+import picture from "./beardglasses.jpg";
 
 export class Data implements Resume {
 	identity: Identity = {
@@ -27,7 +26,7 @@ export class Data implements Resume {
 		additionnals: ["Permis B, véhiculé"],
 		softskills: ["Curieux", "Rigoureux", "Travail d'équipe"],
 		bio:
-			"Je suis un développeur web passioné. J'aime la structure, l'ordre et la qualité. J'aime passer du temps à corriger les petits détails et à optimiser les applications web. J'aime aussi travailler en équipe, pour progresser et apprendre plus vite.",
+			"Je suis un développeur full-stack passioné. J'aime la structure, l'ordre et la qualité. J'aime passer du temps à corriger les petits détails et à optimiser les applications web. J'aime aussi travailler en équipe, pour progresser et apprendre plus vite.",
 		picture: picture,
 		role: "Développeur Full-Stack",
 	};
@@ -38,9 +37,9 @@ export class Data implements Resume {
 			details: ["Java", "Javascript", "Angular", "React"],
 		},
 		{
-			name: "Gestion de versions",
+			name: "Conception Web",
 			comment: "",
-			details: ["SVN", "GIT"],
+			details: ["HTML5", "CSS3"],
 		},
 		{
 			name: "Base de données",
@@ -48,20 +47,19 @@ export class Data implements Resume {
 			details: ["MySQL", "IBM DB2"],
 		},
 		{
-			name: "Conception Web",
+			name: "Gestion de versions",
 			comment: "",
-			details: ["HTML5", "CSS3"],
+			details: ["SVN", "GIT"],
 		},
 		{
 			name: "IDE",
 			comment: "",
-			details: ["Eclpise", "VSCode", "DBeaver"],
+			details: ["Eclipse", "VSCode", "DBeaver"],
 		},
-	];
-	languages: Array<Language> = [
 		{
-			name: "Anglais",
-			comment: "niveau B2",
+			name: "Langue",
+			comment: "",
+			details: ["Anglais, niveau B2"],
 		},
 	];
 	educations: Array<Education> = [
@@ -106,7 +104,7 @@ export class Data implements Resume {
 			school: "Lycée Le Corbusier",
 			city: "Illkirch",
 			startDate: new Date("2012"),
-			endDate: new Date("2015"),
+			endDate: new Date("2014"),
 			current: false,
 			courses: [],
 		},
@@ -116,7 +114,7 @@ export class Data implements Resume {
 			title: "Apprenti analyste programmeur",
 			company: "Les Grands Chais de France",
 			city: "Petersbach",
-			startDate: new Date("2016"),
+			startDate: new Date("2016-08"),
 			endDate: new Date(),
 			current: true,
 			missions: [

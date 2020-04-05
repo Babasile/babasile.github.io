@@ -1,5 +1,5 @@
 import React from "react";
-import Props from "../../interfaces/Props.interface";
+import Props from "./Props.interface";
 import NavState from "../../interfaces/NavState.interface";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -32,7 +32,7 @@ export class Navigation extends React.Component<Props, NavState> {
 	render() {
 		const { links, identity } = this.props;
 
-		const htmlLinks = links?.map((link, i) => (
+		const htmlLinks = links.map((link, i) => (
 			<Nav.Link
 				className={link.url === "#bio" ? "d-none" : ""}
 				key={i}
@@ -43,7 +43,7 @@ export class Navigation extends React.Component<Props, NavState> {
 		));
 		let spyLinks: string[] = [];
 		if (links != null) {
-			spyLinks = links.map(link => link.url.replace("#", ""));
+			spyLinks = links.map((link) => link.url.replace("#", ""));
 		}
 		let navBrand: string = "Curriculum vitæ";
 		let role = "";
