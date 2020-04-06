@@ -19,6 +19,7 @@ export class Footer extends React.Component<Props> {
 				<a
 					href={link.url}
 					target="_blank"
+					aria-label={link.name}
 					rel="noopener noreferrer"
 					className="text-secondary align-baseline mr-1 text-light"
 				>
@@ -39,6 +40,7 @@ export class Footer extends React.Component<Props> {
 							>
 								<a
 									href={contact.url}
+									aria-label={contact.name}
 									target="_blank"
 									rel="noopener noreferrer"
 									className="text-secondary align-baseline text-light"
@@ -57,6 +59,7 @@ export class Footer extends React.Component<Props> {
 							Retrouver ce projet sur{" "}
 							<a
 								href="https://github.com/Babasile/babasile.github.io"
+								aria-label="GitHub repository"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-decoration-none align-baseline text-light"

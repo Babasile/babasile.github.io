@@ -80,7 +80,11 @@ export class Info extends React.Component<Props> {
 							<h4>Extras</h4>
 							<p>
 								{identity.additionnals[0]}{" "}
-								<Image src={sunglasses} className={style.smiley}></Image>
+								<Image
+									src={sunglasses}
+									className={style.smiley}
+									alt="smiley"
+								></Image>
 							</p>
 						</Col>
 					</Row>

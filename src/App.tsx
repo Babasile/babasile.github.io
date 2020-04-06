@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,6 +19,7 @@ import { Info } from "./components/info/Info";
 import { Link } from "./interfaces/Link.interface";
 
 function App() {
+	initializeReactGA();
 	let resume = new Data();
 	let navLinks: Array<Link> = initNavLinks(resume);
 	library.add(fab, fas);
@@ -75,6 +77,12 @@ function initNavLinks(resume: Data): Array<Link> {
 	}
 
 	return navLinks;
+}
+
+function initializeReactGA() {
+	ReactGA.initialize("");
+	ReactGA.set({ page: window.location.pathname });
+	ReactGA.pageview("/home");
 }
 
 export default App;
