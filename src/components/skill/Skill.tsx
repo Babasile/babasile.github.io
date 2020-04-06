@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 
 export class Skill extends React.Component<Props> {
 	render() {
-		let skills = this.props.skills;
+		const { skills } = this.props;
 
 		let renderSkills = skills.map((skill, i) => (
 			<SkillDetail key={i} skill={skill}></SkillDetail>

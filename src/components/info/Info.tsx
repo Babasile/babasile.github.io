@@ -17,8 +17,7 @@ export class Info extends React.Component<Props> {
 
 	render() {
 		const { identity } = this.props;
-		let renderSoftSkills;
-		renderSoftSkills = identity.softskills.map((softSkill, i) => (
+		let renderSoftSkills = identity.softskills.map((softSkill, i) => (
 			<Col
 				className="text-center align-self-center"
 				xs={Math.abs(12 / identity.softskills.length)}

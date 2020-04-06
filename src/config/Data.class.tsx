@@ -147,23 +147,28 @@ export class Data implements Resume {
 	hobbies: Array<Hobby> = [
 		{
 			name: "Développement",
-			comment: "Veille technologique",
+			comment: "Veille technologique: React, Docker, Grafana, Synology, SCRUM ",
+			icon: ["fas", "code"],
 		},
 		{
 			name: "Course à pied",
 			comment: "Old beginner",
+			icon: ["fas", "running"],
 		},
 		{
 			name: "Culture asiatique",
-			comment: "Voyage, nourriture, langues",
+			comment: "Voyage, nourriture, langues, musiques",
+			icon: ["fas", "globe-asia"],
 		},
 		{
 			name: "Cinéphile & Series addict",
 			comment: "",
+			icon: ["fas", "film"],
 		},
 		{
 			name: "Jeux vidéos",
 			comment: "Gamer à mes heures perdues",
+			icon: ["fas", "gamepad"],
 		},
 	];
 	links: Array<Link> = [

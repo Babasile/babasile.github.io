@@ -12,7 +12,7 @@ export class SkillDetail extends React.Component<Props> {
 		));
 		return (
 			<Col md={4} xs={12}>
-				<div className="tree">
+				<div className="tree mb-3 p-3 border border-grey rounded">
 					<ul>
 						<li className="parent_li">
 							<h5>{skill.name}</h5>

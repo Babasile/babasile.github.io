@@ -11,9 +11,9 @@ export class RoleDetail extends React.Component<Props> {
 		));
 		if (renderMissions != null && renderMissions.length > 0) {
 			missions = (
-				<p className="trim text-left">
+				<div className="trim text-left">
 					<ul>{renderMissions}</ul>
-				</p>
+				</div>
 			);
 		}
 		const formatter = new Intl.DateTimeFormat("fr", { month: "long" });
