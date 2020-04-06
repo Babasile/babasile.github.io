@@ -10,7 +10,7 @@ export class Role extends React.Component<Props> {
 		return (
 			<div id="roles" className="bg-light">
 				<Container className="py-5">
-					<h2 className="text-center display-3">Expériences</h2>
+					<h2 className="text-center display-4">Expériences</h2>
 					<hr />
 					<div className="row mt-4">
 						<div className="col-md-10 mx-auto">

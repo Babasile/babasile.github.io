@@ -11,9 +11,9 @@ export class Hobby extends React.Component<Props> {
 			<HobbyDetail key={i} hobby={hobby}></HobbyDetail>
 		));
 		return (
-			<div id="hobbies" className="bg-secondary text-light">
+			<div id="hobbies" className="bg-brown text-light">
 				<Container className="py-5">
-					<h2 className="text-center display-3">Centres d'intérêt</h2>
+					<h2 className="text-center display-4">Centres d'intérêt</h2>
 					<hr className="bg-light" />
 					<Row>{renderhobbies}</Row>
 				</Container>

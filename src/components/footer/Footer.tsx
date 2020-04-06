@@ -9,70 +9,60 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export class Footer extends React.Component<Props> {
 	render() {
-		const { links } = this.props;
-		let contact;
-		let rs = links.map((link, i) =>
-			link.name === "Linkedin" ? (
-				""
-			) : (
-				<OverlayTrigger
-					key="right"
-					placement="right"
-					overlay={<Tooltip id={`tooltip-right`}>{link.name}</Tooltip>}
+		const { links, contact } = this.props;
+		let rs = links.map((link, i) => (
+			<OverlayTrigger
+				key={link.name}
+				placement="right"
+				overlay={<Tooltip id={`tooltip-right`}>{link.name}</Tooltip>}
+			>
+				<a
+					href={link.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="text-secondary align-baseline mr-1 text-light"
 				>
-					<a
-						href={link.url}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-secondary align-baseline mr-1"
-						style={{ fontSize: "2rem" }}
-					>
-						<FontAwesomeIcon
-							icon={
-								link.name === "GitHub"
-									? ["fab", "github"]
-									: link.name === "Twitter"
-									? ["fab", "twitter"]
-									: ["fab", "instagram"]
-							}
-						/>
-					</a>
-				</OverlayTrigger>
-			),
-		);
-		for (let index = 0; index < links.length; index++) {
-			let element = links[index];
-			if (element.name === "Linkedin") {
-				contact = (
-					<OverlayTrigger
-						key="right"
-						placement="right"
-						overlay={<Tooltip id={`tooltip-right`}>{element.name}</Tooltip>}
-					>
-						<a
-							href={element.url}
-							target="_blank"
-							rel="noopener noreferrer"
-							className="text-secondary align-baseline"
-							style={{ fontSize: "2rem" }}
-						>
-							<FontAwesomeIcon icon={["fab", "linkedin"]} />
-						</a>
-					</OverlayTrigger>
-				);
-			}
-		}
+					<FontAwesomeIcon icon={link.icon} className="size-2" />
+				</a>
+			</OverlayTrigger>
+		));
 		return (
-			<footer className="bg-dark text-secondary py-1">
-				<Container>
+			<footer className="bg-dark text-secondary py-1 border-top border-warning">
+				<Container className="py-4 text-center">
 					<Row>
-						<Col md={6}>
+						<Col md={6} className="pb-3">
 							<span className="font-weight-bold ">Contacter moi sur </span>
-							{contact}
+							<OverlayTrigger
+								key={contact.name}
+								placement="right"
+								overlay={<Tooltip id={`tooltip-right`}>{contact.name}</Tooltip>}
+							>
+								<a
+									href={contact.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-secondary align-baseline text-light"
+								>
+									<FontAwesomeIcon icon={contact.icon} className="size-2" />
+								</a>
+							</OverlayTrigger>
 						</Col>
-						<Col md={6}>
+						<Col md={6} className="pb-3">
 							<span className="font-weight-bold">Egalement présent sur </span>
 							{rs}
+						</Col>
+					</Row>
+					<Row className="pt-3">
+						<Col xs={12}>
+							Retrouver ce projet sur{" "}
+							<a
+								href="https://github.com/Babasile/babasile.github.io"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-decoration-none align-baseline text-light"
+							>
+								GitHub <FontAwesomeIcon icon={["fab", "github"]} />
+							</a>
 						</Col>
 					</Row>
 				</Container>

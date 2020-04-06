@@ -12,4 +12,5 @@ export interface Resume {
 	roles: Array<Role>;
 	hobbies: Array<Hobby>;
 	links: Array<Link>;
+	contact: Link;
 }

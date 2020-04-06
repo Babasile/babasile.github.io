@@ -173,23 +173,27 @@ export class Data implements Resume {
 	];
 	links: Array<Link> = [
 		{
-			name: "Linkedin",
-			url: "https://www.linkedin.com/in/basilebuchler/",
-		},
-		{
 			name: "GitHub",
 			pseudo: "Babasile",
 			url: "https://github.com/Babasile",
+			icon: ["fab", "github"],
 		},
 		{
 			name: "Twitter",
 			pseudo: "@Baabasile",
 			url: "https://twitter.com/Baabasile",
+			icon: ["fab", "twitter"],
 		},
 		{
 			name: "Instagram",
 			pseudo: "@Baabasile",
 			url: "https://www.instagram.com/baabasile/",
+			icon: ["fab", "instagram"],
 		},
 	];
+	contact: Link = {
+		name: "Linkedin",
+		url: "https://www.linkedin.com/in/basilebuchler/",
+		icon: ["fab", "linkedin"],
+	};
 }

@@ -24,12 +24,12 @@ function App() {
 	return (
 		<div>
 			<Navigation links={navLinks} identity={resume.identity} />
-			<Info identity={resume.identity} />
+			<Info identity={resume.identity} contact={resume.contact} />
 			<Education educations={resume.educations} />
 			<Role roles={resume.roles} />
 			<Skill skills={resume.skills} />
 			<Hobby hobbies={resume.hobbies} />
-			<Footer links={resume.links} />
+			<Footer links={resume.links} contact={resume.contact} />
 		</div>
 	);
 }
@@ -41,6 +41,7 @@ function initNavLinks(resume: Data): Array<Link> {
 		navLinks.push({
 			name: resume.identity.firstname + " " + resume.identity.lastname,
 			url: "#bio",
+			icon: ["fas", "angle-right"],
 		});
 	}
 
@@ -48,24 +49,28 @@ function initNavLinks(resume: Data): Array<Link> {
 		navLinks.push({
 			name: "Formations",
 			url: "#educations",
+			icon: ["fas", "angle-right"],
 		});
 	}
 	if (resume.roles.length > 0) {
 		navLinks.push({
 			name: "Expériences",
 			url: "#roles",
+			icon: ["fas", "angle-right"],
 		});
 	}
 	if (resume.skills.length > 0) {
 		navLinks.push({
 			name: "Compétences",
 			url: "#skills",
+			icon: ["fas", "angle-right"],
 		});
 	}
 	if (resume.hobbies.length > 0) {
 		navLinks.push({
 			name: "Centres d'intérêt",
 			url: "#hobbies",
+			icon: ["fas", "angle-right"],
 		});
 	}
 

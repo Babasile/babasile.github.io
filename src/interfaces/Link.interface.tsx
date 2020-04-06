@@ -1,7 +1,8 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
 export interface Link {
 	name: string;
 	pseudo?: string;
 	url: string;
-	smallIcon?: string;
-	largeIcon?: string;
+	icon: IconProp;
 }

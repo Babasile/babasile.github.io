@@ -12,9 +12,9 @@ export class Skill extends React.Component<Props> {
 			<SkillDetail key={i} skill={skill}></SkillDetail>
 		));
 		return (
-			<div id="skills" className="bg-secondary text-light">
+			<div id="skills" className="bg-brown text-light">
 				<Container className="py-5">
-					<h2 className="text-center display-3">Compétences</h2>
+					<h2 className="text-center display-4">Compétences</h2>
 					<hr className="bg-light" />
 					<Row>{renderSkills}</Row>
 				</Container>

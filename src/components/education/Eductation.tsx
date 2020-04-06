@@ -12,7 +12,7 @@ export class Education extends React.Component<Props> {
 		return (
 			<div id="educations" className="bg-light">
 				<Container className="py-5">
-					<h2 className="text-center display-3">Formations</h2>
+					<h2 className="text-center display-4">Formations</h2>
 					<hr />
 					<ul></ul>
 

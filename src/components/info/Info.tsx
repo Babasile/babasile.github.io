@@ -7,6 +7,7 @@ import Image from "react-bootstrap/Image";
 import defaultPicture from "./default.jpg";
 import sunglasses from "./sunglasses.png";
 import style from "./Info.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export class Info extends React.Component<Props> {
 	calculateAge(birthdate: Date) {
@@ -16,7 +17,7 @@ export class Info extends React.Component<Props> {
 	}
 
 	render() {
-		const { identity } = this.props;
+		const { identity, contact } = this.props;
 		let renderSoftSkills = identity.softskills.map((softSkill, i) => (
 			<Col
 				className="text-center align-self-center"
@@ -27,7 +28,7 @@ export class Info extends React.Component<Props> {
 			</Col>
 		));
 		return (
-			<div id="bio" className="bg-secondary  text-light">
+			<div id="bio" className="bg-brown text-light">
 				<Container className="py-5">
 					<Row>
 						<Col>
@@ -81,6 +82,19 @@ export class Info extends React.Component<Props> {
 								{identity.additionnals[0]}{" "}
 								<Image src={sunglasses} className={style.smiley}></Image>
 							</p>
+						</Col>
+					</Row>
+					<Row>
+						<Col xs={12} className="text-center mt-5">
+							<a
+								href={contact.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="btn btn-light btn-lg"
+							>
+								Contacter moi sur {contact.name}{" "}
+								<FontAwesomeIcon icon={contact.icon} />
+							</a>
 						</Col>
 					</Row>
 				</Container>

@@ -2,11 +2,18 @@ body {
 	padding-top: 80px;
 }
 
+.bg-brown {
+	background-color: #483838 !important;
+}
 .trim {
 	display: inline-block;
 }
 li {
 	list-style-type: "- ";
+}
+
+.size-2 {
+	font-size: 2rem !important;
 }
 
 .border.border-grey {

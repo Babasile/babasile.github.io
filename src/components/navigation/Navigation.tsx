@@ -63,10 +63,7 @@ export class Navigation extends React.Component<Props, NavState> {
 				<Navbar.Brand className="text-capitalize mr-0" href="#bio" id="me">
 					{navBrand}
 					<small
-						className={
-							(this.state.isTop ? styles.subtitle : "") +
-							" text-capitalize pl-2 font-italic"
-						}
+						className={styles.subtitle + " text-capitalize pl-2 font-italic"}
 					>
 						{role}
 					</small>
