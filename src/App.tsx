@@ -8,15 +8,15 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
 import { Data } from "./config/Data.class";
-
-import { Navigation } from "./components/navigation/Navigation";
-import { Education } from "./components/education/Eductation";
-import { Role } from "./components/role/Role";
-import { Skill } from "./components/skill/Skill";
-import { Hobby } from "./components/hobby/Hobby";
-import { Footer } from "./components/footer/Footer";
-import { Info } from "./components/info/Info";
 import { Link } from "./interfaces/Link.interface";
+
+import Navigation from "./components/navigation/Navigation";
+import Educations from "./components/education/Education";
+import Roles from "./components/role/Role";
+import Skills from "./components/skill/Skill";
+import Hobbies from "./components/hobby/Hobby";
+import Footer from "./components/footer/Footer";
+import Info from "./components/info/Info";
 
 function App() {
 	initializeReactGA();
@@ -27,10 +27,10 @@ function App() {
 		<div>
 			<Navigation links={navLinks} identity={resume.identity} />
 			<Info identity={resume.identity} contact={resume.contact} />
-			<Education educations={resume.educations} />
-			<Role roles={resume.roles} />
-			<Skill skills={resume.skills} />
-			<Hobby hobbies={resume.hobbies} />
+			<Educations educations={resume.educations} />
+			<Roles roles={resume.roles} />
+			<Skills skills={resume.skills} />
+			<Hobbies hobbies={resume.hobbies} />
 			<Footer links={resume.links} contact={resume.contact} />
 		</div>
 	);
