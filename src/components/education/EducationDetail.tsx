@@ -23,7 +23,7 @@ function EducationDetail(props: Props) {
 		<div className="timeline-item">
 			<h5 className="w-auto">
 				{education.startDate.getFullYear()} -{" "}
-				{education.current ? "Acutellement" : education.endDate.getFullYear()}
+				{education.current ? "Actuellement" : education.endDate.getFullYear()}
 			</h5>
 			<div>
 				<h5 className="my-3 font-weight-bolder">{education.diploma}</h5>

@@ -27,7 +27,7 @@ function RoleDetail(props: Props) {
 				{formatter.format(role.startDate) + " " + role.startDate.getFullYear()}{" "}
 				-{" "}
 				{role.current
-					? "Acutellement"
+					? "Actuellement"
 					: formatter.format(role.endDate) + " " + role.endDate.getFullYear()}
 			</h5>
 			<div>
