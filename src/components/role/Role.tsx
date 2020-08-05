@@ -1,14 +1,27 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import RoleDetail from "./RoleDetail";
 import { Role } from "../../interfaces/Role.interface";
+import TimelineItem from "../commons/timelineItem";
 
 interface Props {
 	roles: Array<Role>;
 }
 function Roles(props: Props) {
 	const { roles } = props;
-	const list = roles.map((role, i) => <RoleDetail key={i} role={role} />);
+	const list = roles.map((role, i) => (
+		//<RoleDetail key={i} role={role} />
+		<TimelineItem
+			title={role.title}
+			name={role.company}
+			city={role.city}
+			startDate={role.startDate}
+			endDate={role.endDate}
+			current={role.current}
+			formatDate={true}
+			details={role.missions}
+			keywords={role.keywords}
+		/>
+	));
 	return (
 		<div id="roles" className="bg-light">
 			<Container className="py-5">

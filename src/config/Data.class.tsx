@@ -34,7 +34,7 @@ export class Data implements Resume {
 		{
 			name: "Programmation",
 			comment: "",
-			details: ["Java", "Javascript", "Angular", "React"],
+			details: ["Java", "Javascript", "React", "Angular"],
 		},
 		{
 			name: "Conception Web",
@@ -69,17 +69,23 @@ export class Data implements Resume {
 			city: "Strasbourg",
 			startDate: new Date("2018"),
 			endDate: new Date("2020"),
-			current: true,
-			courses: [],
-		},
-		{
-			diploma: "Master 1 Informatique ILC",
-			school: "Pôle API",
-			city: "Illkirch",
-			startDate: new Date("2017"),
-			endDate: new Date("2018"),
 			current: false,
-			courses: [],
+			courses: [
+				"Gestion de projet",
+				"Marketing et Communication",
+				"Ergonomie et UX",
+				"Développment web",
+			],
+			keywords: [
+				"Alternance",
+				"Gestion de projet",
+				"UX",
+				"Ergonomie",
+				"SEO",
+				"E-commerce",
+				"Javascript",
+				"PHP",
+			],
 		},
 		{
 			diploma: "LP - SIL CDED",
@@ -88,7 +94,22 @@ export class Data implements Resume {
 			startDate: new Date("2016"),
 			endDate: new Date("2017"),
 			current: false,
-			courses: [],
+			courses: [
+				"Contexte professionnel: Séminaires professionnels, gestion de projets, ingénierie des tests, sécurité des systèmes d’information, anglais",
+				"Développement réparti: Développement service web, développement client web, développement client mobile",
+				"Mise en oeuvre: Analyse métier, conception matérielle et logicielle, ergonomie et communication, gestion de projet AGILE, développement",
+				"Projet ACROBAT: développement d'un jeu multijoueur et multiplateforme",
+			],
+			keywords: [
+				"Alternance",
+				"Java",
+				"AngularJS",
+				"Android",
+				"REST API",
+				"Ionic",
+				"Hibernate",
+				"SCRUM",
+			],
 		},
 		{
 			diploma: "DUT Informatique AS",
@@ -97,7 +118,21 @@ export class Data implements Resume {
 			startDate: new Date("2015"),
 			endDate: new Date("2016"),
 			current: false,
-			courses: [],
+			courses: [
+				"Algorithme, Programmation, Réseaux, Web",
+				"Développement Android",
+				"Systèmes de gestion de bases de données",
+				"Projet tuteuré: Développement d'un assistant vocal sur PC",
+			],
+			keywords: [
+				"Java",
+				"MySQL",
+				"HTML",
+				"CSS",
+				"PHP",
+				"Javascript",
+				"Android",
+			],
 		},
 		{
 			diploma: "BTS Travaux Publics",
@@ -106,7 +141,13 @@ export class Data implements Resume {
 			startDate: new Date("2012"),
 			endDate: new Date("2014"),
 			current: false,
-			courses: [],
+			courses: [
+				"Communcation et Sciences",
+				"Etude technique et économique",
+				"Préparation de chantier",
+				"Conduite de chantier",
+			],
+			keywords: [],
 		},
 	];
 	roles: Array<Role> = [
@@ -115,12 +156,13 @@ export class Data implements Resume {
 			company: "Les Grands Chais de France",
 			city: "Petersbach",
 			startDate: new Date("2016-08"),
-			endDate: new Date(),
-			current: true,
+			endDate: new Date("2020-07"),
+			current: false,
 			missions: [
-				"Analyser les besoins",
-				"Développer des applications web sur l'intranet et les extranets",
+				"Développement d'applications web pour l'intranet et les extranets",
+				"Développment de Jobs récurrents",
 			],
+			keywords: ["Apprentissage", "Java", "DBM", "JQuery", "Velocity"],
 		},
 		{
 			title: "Agent de stérilisation",
@@ -133,6 +175,7 @@ export class Data implements Resume {
 				"Réceptionner les outils de médecines avant leur stérilisation",
 				"Effectuer le premier traitement de la stérilisation",
 			],
+			keywords: ["Emploi saisonnier"],
 		},
 		{
 			title: "Stagiaire chef de chantier",
@@ -142,17 +185,19 @@ export class Data implements Resume {
 			endDate: new Date("2013-07"),
 			current: false,
 			missions: ["Gestion du budget journalier"],
+			keywords: ["Stagiaire"],
 		},
 	];
 	hobbies: Array<Hobby> = [
 		{
 			name: "Développement",
-			comment: "Veille technologique: React, Docker, Grafana, Synology, SCRUM ",
+			comment:
+				"Veille technologique: React, Docker, GraphQL, Grafana, Synology, SCRUM",
 			icon: ["fas", "code"],
 		},
 		{
-			name: "Course à pied",
-			comment: "Old beginner",
+			name: "Sport",
+			comment: "Course à pied",
 			icon: ["fas", "running"],
 		},
 		{

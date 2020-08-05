@@ -4,7 +4,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import defaultPicture from "./default.jpg";
-import sunglasses from "./sunglasses.png";
+//import sunglasses from "./sunglasses.png";
+import automobile from "./automobile.png";
 import style from "./Info.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Identity } from "../../interfaces/Identity.interface";
@@ -78,7 +79,7 @@ function Info(props: Props) {
 						<p>
 							{identity.additionnals[0]}{" "}
 							<Image
-								src={sunglasses}
+								src={automobile}
 								className={style.smiley}
 								alt="smiley"
 							></Image>

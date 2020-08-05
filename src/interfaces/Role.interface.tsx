@@ -6,4 +6,5 @@ export interface Role {
 	endDate: Date;
 	current: boolean;
 	missions: Array<string>;
+	keywords: Array<string>;
 }

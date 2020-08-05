@@ -6,4 +6,5 @@ export interface Education {
 	endDate: Date;
 	current: boolean;
 	courses: Array<string>;
+	keywords: Array<string>;
 }

@@ -18,10 +18,12 @@
 		"@types/react-dom": "^16.9.5",
 		"@types/react-scrollspy": "^3.3.2",
 		"bootstrap": "^4.4.1",
+		"i18next": "^19.4.4",
 		"react": "^16.13.1",
 		"react-bootstrap": "^1.0.0",
 		"react-dom": "^16.13.1",
 		"react-ga": "^2.7.0",
+		"react-i18next": "^11.4.0",
 		"react-scripts": "3.4.1",
 		"react-scrollspy": "^3.4.2",
 		"typescript": "^3.7.5"
