@@ -74,7 +74,7 @@ export class Data implements Resume {
 				"Gestion de projet",
 				"Marketing et Communication",
 				"Ergonomie et UX",
-				"Développment web",
+				"Développement web",
 			],
 			keywords: [
 				"Alternance",
@@ -160,7 +160,7 @@ export class Data implements Resume {
 			current: false,
 			missions: [
 				"Développement d'applications web pour l'intranet et les extranets",
-				"Développment de Jobs récurrents",
+				"Développement de Jobs récurrents",
 			],
 			keywords: ["Apprentissage", "Java", "DBM", "JQuery", "Velocity"],
 		},
