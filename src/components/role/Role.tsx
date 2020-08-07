@@ -9,8 +9,8 @@ interface Props {
 function Roles(props: Props) {
 	const { roles } = props;
 	const list = roles.map((role, i) => (
-		//<RoleDetail key={i} role={role} />
 		<TimelineItem
+			key={i}
 			title={role.title}
 			name={role.company}
 			city={role.city}

@@ -16,26 +16,26 @@ interface Props {
 function TimelineItem(props: Props) {
 	let details;
 	let renderDetails = props.details.map((detail, i) => (
-		<li key={i}>{detail}</li>
+		<li key={i + "-d"}>{detail}</li>
 	));
 	if (renderDetails != null && renderDetails.length > 0) {
 		details = (
-			<p className="details trim">
+			<div className="details trim">
 				<ul>{renderDetails}</ul>
-			</p>
+			</div>
 		);
 	}
 	let keywords;
 	let renderKeywords = props.keywords.map((keyword, i) => (
-		<li>
+		<li key={i + "-k"}>
 			<span className="tag">{keyword}</span>
 		</li>
 	));
 	if (renderKeywords != null && renderKeywords.length > 0) {
 		keywords = (
-			<p className="keywords trim">
+			<div className="keywords trim">
 				<ul className="tags">{renderKeywords}</ul>
-			</p>
+			</div>
 		);
 	}
 

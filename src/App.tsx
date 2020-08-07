@@ -19,7 +19,9 @@ import Footer from "./components/footer/Footer";
 import Info from "./components/info/Info";
 
 function App() {
-	initializeReactGA();
+	if (process.env.NODE_ENV === "production") {
+		initializeReactGA();
+	}
 	let resume = new Data();
 	let navLinks: Array<Link> = initNavLinks(resume);
 	library.add(fab, fas);
@@ -80,7 +82,11 @@ function initNavLinks(resume: Data): Array<Link> {
 }
 
 function initializeReactGA() {
-	ReactGA.initialize("");
+	let GA = "";
+	if (process.env.REACT_APP_UA_GOOGLE_PROPERTY !== undefined) {
+		GA = process.env.REACT_APP_UA_GOOGLE_PROPERTY;
+	}
+	ReactGA.initialize(GA);
 	ReactGA.set({ page: window.location.pathname });
 	ReactGA.pageview("/home");
 }

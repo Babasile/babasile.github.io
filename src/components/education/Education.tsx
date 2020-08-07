@@ -10,8 +10,8 @@ interface Props {
 function Educations(props: Props) {
 	const { educations } = props;
 	const list = educations.map((education, i) => (
-		// <EducationDetail key={i} education={education} />
 		<TimelineItem
+			key={i}
 			title={education.diploma}
 			name={education.school}
 			city={education.city}
