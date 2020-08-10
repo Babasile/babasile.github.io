@@ -202,7 +202,7 @@ export class Data implements Resume {
 		},
 		{
 			name: "Culture asiatique",
-			comment: "Voyage, nourriture, langues, musiques",
+			comment: "Voyage, gastronomie, langues, musiques",
 			icon: ["fas", "globe-asia"],
 		},
 		{
