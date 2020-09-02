@@ -26,7 +26,7 @@ export class Data implements Resume {
 		additionnals: ["Permis B, véhiculé"],
 		softskills: ["Curieux", "Rigoureux", "Travail d'équipe"],
 		bio:
-			"Je suis un développeur full-stack passioné. J'aime la structure, l'ordre et la qualité. J'aime passer du temps à corriger les petits détails et à optimiser les applications web. J'aime aussi travailler en équipe, pour progresser et apprendre plus vite.",
+			"Je suis un développeur full-stack passionné. J'aime la structure, l'ordre et la qualité. J'aime passer du temps à corriger les petits détails et à optimiser les applications web. J'aime aussi travailler en équipe, pour progresser et apprendre plus vite.",
 		picture: picture,
 		role: "Développeur Full-Stack",
 	};
@@ -162,7 +162,7 @@ export class Data implements Resume {
 				"Développement d'applications web pour l'intranet et les extranets",
 				"Développement de Jobs récurrents",
 			],
-			keywords: ["Apprentissage", "Java", "DBM", "JQuery", "Velocity"],
+			keywords: ["Apprentissage", "Java", "IBM DB2", "JQuery", "Velocity"],
 		},
 		{
 			title: "Agent de stérilisation",
