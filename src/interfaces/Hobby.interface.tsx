@@ -1,7 +1,7 @@
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { Icon } from "./Icon.interface";
 
 export interface Hobby {
 	name: string;
 	comment: string;
-	icon: IconProp;
+	icon: Icon;
 }

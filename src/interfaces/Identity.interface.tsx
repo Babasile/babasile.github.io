@@ -1,4 +1,5 @@
 import { Address } from "./Address.interface";
+import { Name } from "./Name.interface";
 
 export interface Identity {
 	lastname: string;
@@ -7,9 +8,9 @@ export interface Identity {
 	address: Address;
 	phoneNumber: string;
 	email: string;
-	additionnals: Array<string>;
-	softskills: Array<string>;
+	additionnals: Array<Name>;
+	softskills: Array<Name>;
 	bio: string;
-	picture: string;
+	picture: { url: string };
 	role: string;
 }

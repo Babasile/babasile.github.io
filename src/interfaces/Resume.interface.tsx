@@ -9,7 +9,7 @@ export interface Resume {
 	identity: Identity;
 	skills: Array<Skill>;
 	educations: Array<Education>;
-	roles: Array<Role>;
+	jobs: Array<Role>;
 	hobbies: Array<Hobby>;
 	links: Array<Link>;
 	contact: Link;

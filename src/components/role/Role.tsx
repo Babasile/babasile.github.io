@@ -14,8 +14,8 @@ function Roles(props: Props) {
 			title={role.title}
 			name={role.company}
 			city={role.city}
-			startDate={role.startDate}
-			endDate={role.endDate}
+			startDate={new Date(role.startDate)}
+			endDate={new Date(role.endDate)}
 			current={role.current}
 			formatDate={true}
 			details={role.missions}

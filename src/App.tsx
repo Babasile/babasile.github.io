@@ -7,78 +7,31 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
-import { Data } from "./config/Data.class";
-import { Link } from "./interfaces/Link.interface";
+import SinglePage from "./components/single-page/single-page";
 
-import Navigation from "./components/navigation/Navigation";
-import Educations from "./components/education/Education";
-import Roles from "./components/role/Role";
-import Skills from "./components/skill/Skill";
-import Hobbies from "./components/hobby/Hobby";
-import Footer from "./components/footer/Footer";
-import Info from "./components/info/Info";
+import {
+	ApolloClient,
+	HttpLink,
+	InMemoryCache,
+	ApolloProvider,
+} from "@apollo/client";
 
 function App() {
 	if (process.env.NODE_ENV === "production") {
 		initializeReactGA();
 	}
-	let resume = new Data();
-	let navLinks: Array<Link> = initNavLinks(resume);
+	const client = new ApolloClient({
+		cache: new InMemoryCache({ addTypename: false }),
+		link: new HttpLink({
+			uri: process.env.REACT_APP_GRAPHQL_ENDPOINT,
+		}),
+	});
 	library.add(fab, fas);
 	return (
-		<div>
-			<Navigation links={navLinks} identity={resume.identity} />
-			<Info identity={resume.identity} contact={resume.contact} />
-			<Educations educations={resume.educations} />
-			<Roles roles={resume.roles} />
-			<Skills skills={resume.skills} />
-			<Hobbies hobbies={resume.hobbies} />
-			<Footer links={resume.links} contact={resume.contact} />
-		</div>
+		<ApolloProvider client={client}>
+			<SinglePage />
+		</ApolloProvider>
 	);
-}
-
-function initNavLinks(resume: Data): Array<Link> {
-	let navLinks: Array<Link> = [];
-
-	if (resume.identity != null) {
-		navLinks.push({
-			name: resume.identity.firstname + " " + resume.identity.lastname,
-			url: "#bio",
-			icon: ["fas", "angle-right"],
-		});
-	}
-
-	if (resume.educations.length > 0) {
-		navLinks.push({
-			name: "Formations",
-			url: "#educations",
-			icon: ["fas", "angle-right"],
-		});
-	}
-	if (resume.roles.length > 0) {
-		navLinks.push({
-			name: "Expériences",
-			url: "#roles",
-			icon: ["fas", "angle-right"],
-		});
-	}
-	if (resume.skills.length > 0) {
-		navLinks.push({
-			name: "Compétences",
-			url: "#skills",
-			icon: ["fas", "angle-right"],
-		});
-	}
-	if (resume.hobbies.length > 0) {
-		navLinks.push({
-			name: "Centres d'intérêt",
-			url: "#hobbies",
-			icon: ["fas", "angle-right"],
-		});
-	}
-
-	return navLinks;
 }
 
 function initializeReactGA() {

@@ -1,3 +1,5 @@
+import { Name } from "./Name.interface";
+
 export interface Role {
 	title: string;
 	company: string;
@@ -5,6 +7,6 @@ export interface Role {
 	startDate: Date;
 	endDate: Date;
 	current: boolean;
-	missions: Array<string>;
-	keywords: Array<string>;
+	missions: Array<Name>;
+	keywords: Array<Name>;
 }

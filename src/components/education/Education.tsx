@@ -15,8 +15,8 @@ function Educations(props: Props) {
 			title={education.diploma}
 			name={education.school}
 			city={education.city}
-			startDate={education.startDate}
-			endDate={education.endDate}
+			startDate={new Date(education.startDate)}
+			endDate={new Date(education.endDate)}
 			current={education.current}
 			formatDate={false}
 			details={education.courses}

@@ -1,5 +1,7 @@
+import { Name } from "./Name.interface";
+
 export interface Skill {
 	name: string;
 	comment: string;
-	details: Array<string>;
+	keywords: Array<Name>;
 }

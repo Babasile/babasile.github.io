@@ -26,7 +26,10 @@ function Footer(props: Props) {
 				rel="noopener noreferrer"
 				className="text-secondary align-baseline mr-1 text-light"
 			>
-				<FontAwesomeIcon icon={link.icon} className="size-2" />
+				<FontAwesomeIcon
+					icon={[link.icon.class, link.icon.name]}
+					className="size-2"
+				/>
 			</a>
 		</OverlayTrigger>
 	));
@@ -48,7 +51,10 @@ function Footer(props: Props) {
 								rel="noopener noreferrer"
 								className="text-secondary align-baseline text-light"
 							>
-								<FontAwesomeIcon icon={contact.icon} className="size-2" />
+								<FontAwesomeIcon
+									icon={[contact.icon.class, contact.icon.name]}
+									className="size-2"
+								/>
 							</a>
 						</OverlayTrigger>
 					</Col>

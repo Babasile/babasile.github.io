@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Name } from "../../interfaces/Name.interface";
 
 interface Props {
 	title: string;
@@ -9,14 +10,14 @@ interface Props {
 	endDate: Date;
 	current: boolean;
 	formatDate: boolean;
-	details: Array<string>;
-	keywords: Array<string>;
+	details: Array<Name>;
+	keywords: Array<Name>;
 }
 
 function TimelineItem(props: Props) {
 	let details;
 	let renderDetails = props.details.map((detail, i) => (
-		<li key={i + "-d"}>{detail}</li>
+		<li key={i + "-d"}>{detail.name}</li>
 	));
 	if (renderDetails != null && renderDetails.length > 0) {
 		details = (
@@ -28,7 +29,7 @@ function TimelineItem(props: Props) {
 	let keywords;
 	let renderKeywords = props.keywords.map((keyword, i) => (
 		<li key={i + "-k"}>
-			<span className="tag">{keyword}</span>
+			<span className="tag">{keyword.name}</span>
 		</li>
 	));
 	if (renderKeywords != null && renderKeywords.length > 0) {

@@ -18,13 +18,15 @@ interface Props {
 
 function Info(props: Props) {
 	const { identity, contact } = props;
-	let renderSoftSkills = identity.softskills.map((softSkill, i) => (
+	console.log(identity.picture);
+	console.log(defaultPicture);
+	let renderSoftSkills = identity.softskills.map((value, i) => (
 		<Col
 			className="text-center align-self-center"
 			xs={Math.abs(12 / identity.softskills.length)}
 			key={i}
 		>
-			<span>{softSkill}</span>
+			<span>{value.name}</span>
 		</Col>
 	));
 	return (
@@ -56,7 +58,9 @@ function Info(props: Props) {
 							roundedCircle
 							thumbnail
 							src={
-								identity.picture.length > 0 ? identity.picture : defaultPicture
+								identity.picture.url.length > 0
+									? process.env.REACT_APP_STRAPI_URL + identity.picture.url
+									: defaultPicture
 							}
 							alt="Ma tête"
 							className="border border-warning bg-warning"
@@ -77,7 +81,7 @@ function Info(props: Props) {
 						<hr className="bg-light" />
 						<h4>Extras</h4>
 						<p>
-							{identity.additionnals[0]}{" "}
+							{identity.additionnals[0].name}{" "}
 							<Image
 								src={automobile}
 								className={style.smiley}
@@ -95,7 +99,7 @@ function Info(props: Props) {
 							className="btn btn-light btn-lg"
 						>
 							Contacter moi sur {contact.name}{" "}
-							<FontAwesomeIcon icon={contact.icon} />
+							<FontAwesomeIcon icon={[contact.icon.class, contact.icon.name]} />
 						</a>
 					</Col>
 				</Row>
@@ -105,7 +109,7 @@ function Info(props: Props) {
 }
 
 function calculateAge(birthdate: Date) {
-	let difference = Date.now() - birthdate.getTime();
+	let difference = Date.now() - new Date(birthdate).getTime();
 	let age = new Date(difference);
 	return Math.abs(age.getUTCFullYear() - 1970);
 }

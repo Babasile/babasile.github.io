@@ -23,43 +23,52 @@ export class Data implements Resume {
 		},
 		phoneNumber: "",
 		email: "",
-		additionnals: ["Permis B, véhiculé"],
-		softskills: ["Curieux", "Rigoureux", "Travail d'équipe"],
+		additionnals: [{ name: "Permis B, véhiculé" }],
+		softskills: [
+			{ name: "Curieux" },
+			{ name: "Rigoureux" },
+			{ name: "Travail d'équipe" },
+		],
 		bio:
 			"Je suis un développeur full-stack passionné. J'aime la structure, l'ordre et la qualité. J'aime passer du temps à corriger les petits détails et à optimiser les applications web. J'aime aussi travailler en équipe, pour progresser et apprendre plus vite.",
-		picture: picture,
+		picture: { url: picture },
 		role: "Développeur Full-Stack",
 	};
 	skills: Array<Skill> = [
 		{
 			name: "Programmation",
 			comment: "",
-			details: ["Java", "Javascript", "React", "Angular"],
+			keywords: [
+				{ name: "Java" },
+				{ name: "Javascript" },
+				{ name: "React" },
+				{ name: "Angular" },
+			],
 		},
 		{
 			name: "Conception Web",
 			comment: "",
-			details: ["HTML5", "CSS3"],
+			keywords: [{ name: "HTML5" }, { name: "CSS3" }],
 		},
 		{
 			name: "Base de données",
 			comment: "",
-			details: ["MySQL", "IBM DB2"],
+			keywords: [{ name: "MySQL" }, { name: "IBM DB2" }],
 		},
 		{
 			name: "Gestion de versions",
 			comment: "",
-			details: ["SVN", "GIT"],
+			keywords: [{ name: "SVN" }, { name: "GIT" }],
 		},
 		{
 			name: "IDE",
 			comment: "",
-			details: ["Eclipse", "VSCode", "DBeaver"],
+			keywords: [{ name: "Eclipse" }, { name: "VSCode" }, { name: "DBeaver" }],
 		},
 		{
 			name: "Langue",
 			comment: "",
-			details: ["Anglais, niveau B2"],
+			keywords: [{ name: "Anglais, niveau B2" }],
 		},
 	];
 	educations: Array<Education> = [
@@ -71,20 +80,20 @@ export class Data implements Resume {
 			endDate: new Date("2020"),
 			current: false,
 			courses: [
-				"Gestion de projet",
-				"Marketing et Communication",
-				"Ergonomie et UX",
-				"Développement web",
+				{ name: "Gestion de projet" },
+				{ name: "Marketing et Communication" },
+				{ name: "Ergonomie et UX" },
+				{ name: "Développement web" },
 			],
 			keywords: [
-				"Alternance",
-				"Gestion de projet",
-				"UX",
-				"Ergonomie",
-				"SEO",
-				"E-commerce",
-				"Javascript",
-				"PHP",
+				{ name: "Alternance" },
+				{ name: "Gestion de projet" },
+				{ name: "UX" },
+				{ name: "Ergonomie" },
+				{ name: "SEO" },
+				{ name: "E-commerce" },
+				{ name: "Javascript" },
+				{ name: "PHP" },
 			],
 		},
 		{
@@ -95,20 +104,32 @@ export class Data implements Resume {
 			endDate: new Date("2017"),
 			current: false,
 			courses: [
-				"Contexte professionnel: Séminaires professionnels, gestion de projets, ingénierie des tests, sécurité des systèmes d’information, anglais",
-				"Développement réparti: Développement service web, développement client web, développement client mobile",
-				"Mise en oeuvre: Analyse métier, conception matérielle et logicielle, ergonomie et communication, gestion de projet AGILE, développement",
-				"Projet ACROBAT: développement d'un jeu multijoueur et multiplateforme",
+				{
+					name:
+						"Contexte professionnel: Séminaires professionnels, gestion de projets, ingénierie des tests, sécurité des systèmes d’information, anglais",
+				},
+				{
+					name:
+						"Développement réparti: Développement service web, développement client web, développement client mobile",
+				},
+				{
+					name:
+						"Mise en oeuvre: Analyse métier, conception matérielle et logicielle, ergonomie et communication, gestion de projet AGILE, développement",
+				},
+				{
+					name:
+						"Projet ACROBAT: développement d'un jeu multijoueur et multiplateforme",
+				},
 			],
 			keywords: [
-				"Alternance",
-				"Java",
-				"AngularJS",
-				"Android",
-				"REST API",
-				"Ionic",
-				"Hibernate",
-				"SCRUM",
+				{ name: "Alternance" },
+				{ name: "Java" },
+				{ name: "AngularJS" },
+				{ name: "Android" },
+				{ name: "REST API" },
+				{ name: "Ionic" },
+				{ name: "Hibernate" },
+				{ name: "SCRUM" },
 			],
 		},
 		{
@@ -119,19 +140,19 @@ export class Data implements Resume {
 			endDate: new Date("2016"),
 			current: false,
 			courses: [
-				"Algorithme, Programmation, Réseaux, Web",
-				"Développement Android",
-				"Systèmes de gestion de bases de données",
-				"Projet tuteuré: Développement d'un assistant vocal sur PC",
+				{ name: "Algorithme, Programmation, Réseaux, Web" },
+				{ name: "Développement Android" },
+				{ name: "Systèmes de gestion de bases de données" },
+				{ name: "Projet tuteuré: Développement d'un assistant vocal sur PC" },
 			],
 			keywords: [
-				"Java",
-				"MySQL",
-				"HTML",
-				"CSS",
-				"PHP",
-				"Javascript",
-				"Android",
+				{ name: "Java" },
+				{ name: "MySQL" },
+				{ name: "HTML" },
+				{ name: "CSS" },
+				{ name: "PHP" },
+				{ name: "Javascript" },
+				{ name: "Android" },
 			],
 		},
 		{
@@ -142,15 +163,15 @@ export class Data implements Resume {
 			endDate: new Date("2014"),
 			current: false,
 			courses: [
-				"Communcation et Sciences",
-				"Etude technique et économique",
-				"Préparation de chantier",
-				"Conduite de chantier",
+				{ name: "Communcation et Sciences" },
+				{ name: "Etude technique et économique" },
+				{ name: "Préparation de chantier" },
+				{ name: "Conduite de chantier" },
 			],
 			keywords: [],
 		},
 	];
-	roles: Array<Role> = [
+	jobs: Array<Role> = [
 		{
 			title: "Apprenti analyste programmeur",
 			company: "Les Grands Chais de France",
@@ -159,10 +180,19 @@ export class Data implements Resume {
 			endDate: new Date("2020-07"),
 			current: false,
 			missions: [
-				"Développement d'applications web pour l'intranet et les extranets",
-				"Développement de Jobs récurrents",
+				{
+					name:
+						"Développement d'applications web pour l'intranet et les extranets",
+				},
+				{ name: "Développement de Jobs récurrents" },
 			],
-			keywords: ["Apprentissage", "Java", "IBM DB2", "JQuery", "Velocity"],
+			keywords: [
+				{ name: "Apprentissage" },
+				{ name: "Java" },
+				{ name: "IBM DB2" },
+				{ name: "JQuery" },
+				{ name: "Velocity" },
+			],
 		},
 		{
 			title: "Agent de stérilisation",
@@ -172,10 +202,12 @@ export class Data implements Resume {
 			endDate: new Date("2015-08-31"),
 			current: false,
 			missions: [
-				"Réceptionner les outils de médecines avant leur stérilisation",
-				"Effectuer le premier traitement de la stérilisation",
+				{
+					name: "Réceptionner les outils de médecines avant leur stérilisation",
+				},
+				{ name: "Effectuer le premier traitement de la stérilisation" },
 			],
-			keywords: ["Emploi saisonnier"],
+			keywords: [{ name: "Emploi saisonnier" }],
 		},
 		{
 			title: "Stagiaire chef de chantier",
@@ -184,8 +216,8 @@ export class Data implements Resume {
 			startDate: new Date("2013-05"),
 			endDate: new Date("2013-07"),
 			current: false,
-			missions: ["Gestion du budget journalier"],
-			keywords: ["Stagiaire"],
+			missions: [{ name: "Gestion du budget journalier" }],
+			keywords: [{ name: "Stagiaire" }],
 		},
 	];
 	hobbies: Array<Hobby> = [
@@ -193,27 +225,27 @@ export class Data implements Resume {
 			name: "Développement",
 			comment:
 				"Veille technologique: React, Docker, GraphQL, Grafana, Synology, SCRUM",
-			icon: ["fas", "code"],
+			icon: { class: "fas", name: "code" },
 		},
 		{
 			name: "Sport",
 			comment: "Course à pied",
-			icon: ["fas", "running"],
+			icon: { class: "fas", name: "running" },
 		},
 		{
 			name: "Culture asiatique",
 			comment: "Voyage, gastronomie, langues, musiques",
-			icon: ["fas", "globe-asia"],
+			icon: { class: "fas", name: "globe-asia" },
 		},
 		{
 			name: "Cinéphile & Series addict",
 			comment: "",
-			icon: ["fas", "film"],
+			icon: { class: "fas", name: "film" },
 		},
 		{
 			name: "Jeux vidéos",
 			comment: "Gamer à mes heures perdues",
-			icon: ["fas", "gamepad"],
+			icon: { class: "fas", name: "gamepad" },
 		},
 	];
 	links: Array<Link> = [
@@ -221,24 +253,24 @@ export class Data implements Resume {
 			name: "GitHub",
 			pseudo: "Babasile",
 			url: "https://github.com/Babasile",
-			icon: ["fab", "github"],
+			icon: { class: "fab", name: "github" },
 		},
 		{
 			name: "Twitter",
 			pseudo: "@Baabasile",
 			url: "https://twitter.com/Baabasile",
-			icon: ["fab", "twitter"],
+			icon: { class: "fab", name: "twitter" },
 		},
 		{
 			name: "Instagram",
 			pseudo: "@Baabasile",
 			url: "https://www.instagram.com/baabasile/",
-			icon: ["fab", "instagram"],
+			icon: { class: "fab", name: "instagram" },
 		},
 	];
 	contact: Link = {
 		name: "Linkedin",
 		url: "https://www.linkedin.com/in/basilebuchler/",
-		icon: ["fab", "linkedin"],
+		icon: { class: "fab", name: "linkedin" },
 	};
 }

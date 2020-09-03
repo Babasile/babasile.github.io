@@ -1,3 +1,5 @@
+import { Name } from "./Name.interface";
+
 export interface Education {
 	diploma: string;
 	school: string;
@@ -5,6 +7,6 @@ export interface Education {
 	startDate: Date;
 	endDate: Date;
 	current: boolean;
-	courses: Array<string>;
-	keywords: Array<string>;
+	courses: Array<Name>;
+	keywords: Array<Name>;
 }

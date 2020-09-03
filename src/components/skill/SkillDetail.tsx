@@ -8,9 +8,9 @@ interface Props {
 
 function SkillDetail(props: Props) {
 	const skill = props.skill;
-	let details = skill.details.map((detail, i) => (
+	let details = skill.keywords.map((keyword, i) => (
 		<li key={i}>
-			<span>{detail}</span>
+			<span>{keyword.name}</span>
 		</li>
 	));
 	return (
