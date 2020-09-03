@@ -23,7 +23,7 @@ function App() {
 	const client = new ApolloClient({
 		cache: new InMemoryCache({ addTypename: false }),
 		link: new HttpLink({
-			uri: process.env.REACT_APP_GRAPHQL_ENDPOINT,
+			uri: process.env.REACT_APP_STRAPI_URL + "/graphql",
 		}),
 	});
 	library.add(fab, fas);
