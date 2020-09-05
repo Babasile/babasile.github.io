@@ -59,7 +59,7 @@ function Info(props: Props) {
 							thumbnail
 							src={
 								identity.picture.url.length > 0
-									? process.env.REACT_APP_STRAPI_URL + identity.picture.url
+									? identity.picture.url
 									: defaultPicture
 							}
 							alt="Ma tête"
