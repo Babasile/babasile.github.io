@@ -18,8 +18,6 @@ interface Props {
 
 function Info(props: Props) {
 	const { identity, contact } = props;
-	console.log(identity.picture);
-	console.log(defaultPicture);
 	let renderSoftSkills = identity.softskills.map((value, i) => (
 		<Col
 			className="text-center align-self-center"

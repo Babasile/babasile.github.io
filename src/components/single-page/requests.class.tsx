@@ -31,7 +31,7 @@ export default class Requests {
 					name
 				}
 			}
-			educations(sort: "startDate:DESC") {
+			educations(sort: "startDate:DESC", where: { published: true }) {
 				id
 				diploma
 				school
@@ -46,7 +46,7 @@ export default class Requests {
 					name
 				}
 			}
-			jobs(sort: "startDate:DESC") {
+			jobs(sort: "startDate:DESC", where: { published: true }) {
 				id
 				company
 				city
