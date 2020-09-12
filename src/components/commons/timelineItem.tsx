@@ -34,7 +34,7 @@ function TimelineItem(props: Props) {
 	));
 	if (renderKeywords != null && renderKeywords.length > 0) {
 		keywords = (
-			<div className="keywords trim">
+			<div className="keywords">
 				<ul className="tags">{renderKeywords}</ul>
 			</div>
 		);
