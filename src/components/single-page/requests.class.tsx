@@ -48,6 +48,7 @@ export default class Requests {
 			}
 			jobs(sort: "startDate:DESC", where: { published: true }) {
 				id
+				title
 				company
 				city
 				startDate
