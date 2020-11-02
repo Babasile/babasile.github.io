@@ -16,7 +16,7 @@ function Hobbies(props: Props) {
 	return (
 		<div id="hobbies" className="bg-brown text-light">
 			<Container className="py-5">
-				<h2 className="text-center display-4">Centres d'intérêt</h2>
+				<h2 className="text-center mt-5 mt-md-0 display-4">Centres d'intérêt</h2>
 				<hr className="bg-light" />
 				<Row>{renderhobbies}</Row>
 			</Container>

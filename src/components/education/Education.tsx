@@ -26,7 +26,7 @@ function Educations(props: Props) {
 	return (
 		<div id="educations" className="bg-light">
 			<Container className="py-5">
-				<h2 className="text-center display-4">Formations</h2>
+				<h2 className="text-center mt-5 display-4">Formations</h2>
 				<hr />
 				<div className="row mt-4">
 					<div className="col-md-10 mx-auto">

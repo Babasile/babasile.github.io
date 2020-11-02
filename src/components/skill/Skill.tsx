@@ -17,7 +17,7 @@ function Skills(props: Props) {
 	return (
 		<div id="skills" className="bg-brown text-light">
 			<Container className="py-5">
-				<h2 className="text-center display-4">Compétences</h2>
+				<h2 className="text-center mt-5 display-4">Compétences</h2>
 				<hr className="bg-light" />
 				<Row>{renderSkills}</Row>
 			</Container>
