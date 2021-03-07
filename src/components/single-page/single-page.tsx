@@ -46,8 +46,8 @@ function SinglePage() {
 		<div>
 			<Navigation links={navLinks} identity={resume.identity} />
 			<Info identity={resume.identity} contact={resume.contact} />
-			<Educations educations={resume.educations} />
 			<Roles roles={resume.jobs} />
+			<Educations educations={resume.educations} />
 			<Skills skills={resume.skills} />
 			<Hobbies hobbies={resume.hobbies} />
 			<Footer links={resume.links} contact={resume.contact} />
