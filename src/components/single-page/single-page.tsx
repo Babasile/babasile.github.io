@@ -65,18 +65,17 @@ function createNavLinks(resume: Data): Array<Link> {
 			icon: { class: "fas", name: "angle-right" },
 		});
 	}
-
-	if (resume.educations.length > 0) {
-		navLinks.push({
-			name: "Formations",
-			url: "#educations",
-			icon: { class: "fas", name: "angle-right" },
-		});
-	}
 	if (resume.jobs.length > 0) {
 		navLinks.push({
 			name: "Expériences",
 			url: "#roles",
+			icon: { class: "fas", name: "angle-right" },
+		});
+	}
+	if (resume.educations.length > 0) {
+		navLinks.push({
+			name: "Formations",
+			url: "#educations",
 			icon: { class: "fas", name: "angle-right" },
 		});
 	}
