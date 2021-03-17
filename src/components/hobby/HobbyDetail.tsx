@@ -16,7 +16,7 @@ function HobbyDetail(props: Props) {
 					icon={[hobby.icon.class, hobby.icon.name]}
 					className="display-1"
 				/>
-				<h5 className="my-2">{hobby.name}</h5>
+				<div className="h5 my-2">{hobby.name}</div>
 				<p className="m-0">{hobby.comment}</p>
 			</div>
 		</Col>

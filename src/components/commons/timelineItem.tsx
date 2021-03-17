@@ -66,9 +66,9 @@ function TimelineItem(props: Props) {
 
 	return (
 		<div className="timeline-item">
-			<h5 className="w-auto text-capitalize">{renderDate()}</h5>
+			<div className="h5 w-auto text-capitalize">{renderDate()}</div>
 			<div>
-				<h5 className="my-3 font-weight-bolder">{props.title}</h5>
+				<div className="h5 my-3 font-weight-bolder">{props.title}</div>
 				<p className="font-weight-bold">
 					{props.name}{" "}
 					<span className="text-success">

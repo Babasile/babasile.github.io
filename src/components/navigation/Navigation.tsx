@@ -16,7 +16,7 @@ function Navigation(props: Props) {
 
 	const htmlLinks = links.map((link, i) => (
 		<Nav.Link
-			className={link.url === "#bio" ? "d-none" : ""}
+			className={link.url === "#bio" ? "d-none" : styles.textColor}
 			key={i}
 			href={link.url}
 		>

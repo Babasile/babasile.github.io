@@ -18,7 +18,7 @@ function SkillDetail(props: Props) {
 			<div className="tree mb-3 p-3 border border-grey rounded">
 				<ul>
 					<li className="parent_li">
-						<h5>{skill.name}</h5>
+						<div className="h5">{skill.name}</div>
 						<ul>{details}</ul>
 					</li>
 				</ul>

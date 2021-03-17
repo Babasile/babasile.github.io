@@ -5,6 +5,17 @@ body {
 .bg-brown {
 	background-color: #483838 !important;
 }
+
+.nav-link.active {
+	color: #fff !important;
+	opacity: 1 !important;
+}
+
+.nav-link:hover {
+	color: #fff !important;
+	opacity: 1 !important;
+}
+
 .trim {
 	display: inline-block;
 }

@@ -7,6 +7,8 @@ import Col from "react-bootstrap/Col";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "../../interfaces/Link.interface";
 
+import styles from "./Footer.module.css";
+
 interface Props {
 	links: Array<Link>;
 	contact: Link;
@@ -34,11 +36,11 @@ function Footer(props: Props) {
 		</OverlayTrigger>
 	));
 	return (
-		<footer className="bg-dark text-secondary py-1 border-top border-warning">
+		<footer className={styles.textColor + " bg-dark py-1 border-top border-warning"}>
 			<Container className="py-4 text-center">
 				<Row>
 					<Col md={6} className="pb-3">
-						<span className="font-weight-bold ">Contacter moi sur </span>
+						<span>Contacter moi sur </span>
 						<OverlayTrigger
 							key={contact.name}
 							placement="right"
@@ -59,7 +61,7 @@ function Footer(props: Props) {
 						</OverlayTrigger>
 					</Col>
 					<Col md={6} className="pb-3">
-						<span className="font-weight-bold">Egalement présent sur </span>
+						<span>Egalement présent sur </span>
 						{rs}
 					</Col>
 				</Row>

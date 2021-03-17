@@ -61,6 +61,8 @@ function Info(props: Props) {
 									: defaultPicture
 							}
 							alt="Ma tête"
+							width={182}
+							height={188}
 							className="border border-warning bg-warning"
 						/>
 					</Col>
@@ -83,6 +85,8 @@ function Info(props: Props) {
 							<Image
 								src={automobile}
 								className={style.smiley}
+								width={58}
+								height={32}
 								alt="smiley"
 							></Image>
 						</p>
