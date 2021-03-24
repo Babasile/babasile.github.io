@@ -43,6 +43,7 @@ export class Data implements Resume {
 				{ name: "Javascript" },
 				{ name: "React" },
 				{ name: "Angular" },
+				{ name: "Typescript" },
 			],
 		},
 		{
@@ -63,12 +64,12 @@ export class Data implements Resume {
 		{
 			name: "IDE",
 			comment: "",
-			keywords: [{ name: "Eclipse" }, { name: "VSCode" }, { name: "DBeaver" }],
+			keywords: [{ name: "Eclipse" }, { name: "VSCode" }, { name: "DBeaver" }, { name: "WebStorm" }],
 		},
 		{
 			name: "Langue",
 			comment: "",
-			keywords: [{ name: "Anglais, niveau B2" }],
+			keywords: [{ name: "Anglais, compétence professionnelle" }],
 		},
 	];
 	educations: Array<Education> = [
@@ -155,23 +156,38 @@ export class Data implements Resume {
 				{ name: "Android" },
 			],
 		},
-		{
-			diploma: "BTS Travaux Publics",
-			school: "Lycée Le Corbusier",
-			city: "Illkirch",
-			startDate: new Date("2012"),
-			endDate: new Date("2014"),
-			current: false,
-			courses: [
-				{ name: "Communcation et Sciences" },
-				{ name: "Etude technique et économique" },
-				{ name: "Préparation de chantier" },
-				{ name: "Conduite de chantier" },
-			],
-			keywords: [],
-		},
 	];
 	jobs: Array<Role> = [
+		{
+			title: "Développeur Full-Stack",
+			company: "Transiteo",
+			city: "Rosheim",
+			startDate: new Date("2020-09"),
+			endDate: new Date("2020-11"),
+			current: false,
+			missions: [
+				{
+					name: "Développement d’un tableau de bord (graphique, world map, etc)",
+				},
+				{
+					name: "Développement d’un module de gestion d’utilisateurs (CRUD)"
+				},
+				{
+					name: "Développement d’un module de calcul de taxes (formulaire en plusieurs étapes)"
+				},
+				{
+					name: "Développement de tests unitaires, «interceptors» et «guards»"
+				}
+			],
+			keywords: [
+				{ name: "Angular" },
+				{ name: "GIT" },
+				{ name: "VSCode" },
+				{ name: "Typescript" },
+				{ name: "AWS" },
+				{ name: "GitLab" }
+			],
+		},
 		{
 			title: "Apprenti analyste programmeur",
 			company: "Les Grands Chais de France",
@@ -181,44 +197,31 @@ export class Data implements Resume {
 			current: false,
 			missions: [
 				{
-					name:
-						"Développement d'applications web pour l'intranet et les extranets",
+					name: "Développement d’une application web indiquant la faisabilité d’un projet packaging",
 				},
-				{ name: "Développement de Jobs récurrents" },
+				{
+					name: "Développement d’une application intranet de réservation de vehicules"
+				},
+				{
+					name: "Développement d’un extranet à destination des viticulteurs d’Alsace"
+				},
+				{
+					name: "Migration des extranets sur un nouveau serveur"
+				},
+				{
+					name: "Mise à jour et migration de jobs pour l’utilisation d’OpCon"
+				}
 			],
 			keywords: [
 				{ name: "Apprentissage" },
 				{ name: "Java" },
+				{ name: "Javascript" },
+				{ name: "Eclipse" },
 				{ name: "IBM DB2" },
 				{ name: "JQuery" },
 				{ name: "Velocity" },
 			],
-		},
-		{
-			title: "Agent de stérilisation",
-			company: "Nouvel hopital civil",
-			city: "Strasbourg",
-			startDate: new Date("2015-07-01"),
-			endDate: new Date("2015-08-31"),
-			current: false,
-			missions: [
-				{
-					name: "Réceptionner les outils de médecines avant leur stérilisation",
-				},
-				{ name: "Effectuer le premier traitement de la stérilisation" },
-			],
-			keywords: [{ name: "Emploi saisonnier" }],
-		},
-		{
-			title: "Stagiaire chef de chantier",
-			company: "COLAS",
-			city: "Ostwald",
-			startDate: new Date("2013-05"),
-			endDate: new Date("2013-07"),
-			current: false,
-			missions: [{ name: "Gestion du budget journalier" }],
-			keywords: [{ name: "Stagiaire" }],
-		},
+		}
 	];
 	hobbies: Array<Hobby> = [
 		{
