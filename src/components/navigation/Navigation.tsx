@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Scrollspy from "react-scrollspy";
@@ -41,6 +41,7 @@ function Navigation(props: Props) {
 			expand="md"
 			fixed="top"
 			className="border-bottom border-warning"
+			collapseOnSelect={true}
 		>
 			<Navbar.Brand className="text-capitalize mr-0" href="#bio" id="me">
 				{navBrand}
