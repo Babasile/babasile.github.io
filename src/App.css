@@ -2,6 +2,24 @@ body {
 	padding-top: 80px;
 }
 
+::-webkit-scrollbar {
+	background-color: #f8f9fa;
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: rgba(72,56,56,0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(72,56,56,0.8);
+}
+
+::-webkit-scrollbar-thumb:active {
+	background-color: rgba(72,56,56,1);
+}
+
 .bg-brown {
 	background-color: #483838 !important;
 }
