@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Scrollspy from "react-scrollspy";
@@ -13,12 +13,14 @@ interface Props {
 }
 function Navigation(props: Props) {
 	const { links, identity } = props;
+	const [expanded, setExpanded] = useState<boolean>(false)
 
 	const htmlLinks = links.map((link, i) => (
 		<Nav.Link
 			className={link.url === "#bio" ? "d-none" : styles.textColor}
 			key={i}
 			href={link.url}
+			onSelect={() => setExpanded(false)}
 		>
 			{link.name}
 		</Nav.Link>
@@ -41,9 +43,9 @@ function Navigation(props: Props) {
 			expand="md"
 			fixed="top"
 			className="border-bottom border-warning"
-			collapseOnSelect={true}
+			expanded={expanded}
 		>
-			<Navbar.Brand className="text-capitalize mr-0" href="#bio" id="me">
+			<Navbar.Brand className="text-capitalize mr-0" href="#bio" id="me" onClick={() => setExpanded(false)}>
 				{navBrand}
 				<small
 					className={styles.subtitle + " text-capitalize pl-2 font-italic"}
@@ -51,7 +53,7 @@ function Navigation(props: Props) {
 					{role}
 				</small>
 			</Navbar.Brand>
-			<Navbar.Toggle aria-controls="basic-navbar-nav" />
+			<Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(true)} />
 			<Navbar.Collapse id="basic-navbar-nav">
 				<Scrollspy
 					items={spyLinks}
