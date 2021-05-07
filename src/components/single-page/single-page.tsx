@@ -18,7 +18,14 @@ import {useTranslation} from 'react-i18next';
 
 function SinglePage() {
 	const { t, i18n } = useTranslation();
-	const locale = i18n.language === "fr" ? "fr-FR" : i18n.language;
+	let locale;
+	if( i18n.language.toLowerCase().startsWith( "fr" ) ) {
+		locale = "fr-FR";
+	} else if( i18n.language.toLowerCase().startsWith( "en" ) ) {
+		locale = "en";
+	} else {
+		locale = i18n.language;
+	}
 	let init = new Data();
 	let initNavLinks: Array<Link> = createNavLinks(init);
 	const [isLoading, setIsLoading] = useState<boolean>(true);

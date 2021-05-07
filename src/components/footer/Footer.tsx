@@ -19,9 +19,9 @@ function Footer(props: Props) {
 	const { t } = useTranslation();
 	const { links, contact } = props;
 	let enActive = "";
-	enActive = i18n.language === "en" ? styles.langActive : "";
+	enActive = i18n.language.toLowerCase().startsWith( "en" ) ? styles.langActive : "";
 	let frActive = "";
-	frActive = i18n.language === "fr" ? styles.langActive : "";
+	frActive = i18n.language.toLowerCase().startsWith( "fr" ) ? styles.langActive : "";
 	let rs = links.map((link, i) => (
 		<OverlayTrigger
 			key={link.name}
