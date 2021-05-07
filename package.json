@@ -21,6 +21,8 @@
 		"bootstrap": "^4.4.1",
 		"graphql": "^15.3.0",
 		"i18next": "^19.4.4",
+		"i18next-browser-languagedetector": "^6.1.0",
+		"i18next-http-backend": "^1.2.2",
 		"react": "^16.13.1",
 		"react-bootstrap": "^1.0.0",
 		"react-dom": "^16.13.1",

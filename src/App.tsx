@@ -1,6 +1,7 @@
 import React from "react";
 import ReactGA from "react-ga";
 import "./App.css";
+import './i18n/config';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -15,6 +16,8 @@ import {
 	InMemoryCache,
 	ApolloProvider,
 } from "@apollo/client";
+import {I18nextProvider} from 'react-i18next';
+import i18n from './i18n/config';
 
 function App() {
 	if (process.env.NODE_ENV === "production") {
@@ -28,9 +31,11 @@ function App() {
 	});
 	library.add(fab, fas);
 	return (
-		<ApolloProvider client={client}>
-			<SinglePage />
-		</ApolloProvider>
+		<I18nextProvider i18n={i18n}>
+			<ApolloProvider client={client}>
+				<SinglePage />
+			</ApolloProvider>
+		</I18nextProvider>
 	);
 }
 

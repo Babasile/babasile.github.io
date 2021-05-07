@@ -2,8 +2,8 @@ import { gql } from "@apollo/client";
 
 export default class Requests {
 	static GET_DATA = gql`
-		query Data {
-			identity {
+		query Data($locale: String) {
+			identity(locale: $locale) {
 				firstname
 				lastname
 				birthdate
@@ -31,7 +31,7 @@ export default class Requests {
 					name
 				}
 			}
-			educations(sort: "startDate:DESC", where: { published: true }) {
+			educations(locale: $locale, sort: "startDate:DESC", where: { published: true }) {
 				id
 				diploma
 				school
@@ -46,7 +46,7 @@ export default class Requests {
 					name
 				}
 			}
-			jobs(sort: "startDate:DESC", where: { published: true }) {
+			jobs(locale: $locale, sort: "startDate:DESC", where: { published: true }) {
 				id
 				title
 				company
@@ -61,7 +61,7 @@ export default class Requests {
 					name
 				}
 			}
-			hobbies {
+			hobbies(locale: $locale) {
 				id
 				name
 				comment
@@ -70,7 +70,7 @@ export default class Requests {
 					name
 				}
 			}
-			skills {
+			skills(locale: $locale) {
 				id
 				name
 				comment
@@ -78,7 +78,7 @@ export default class Requests {
 					name
 				}
 			}
-			links {
+			links(locale: $locale) {
 				id
 				name
 				pseudo

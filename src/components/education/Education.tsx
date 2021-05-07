@@ -2,12 +2,14 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import TimelineItem from "../commons/timelineItem";
 import { Education } from "../../interfaces/Education.interface";
+import {useTranslation} from 'react-i18next';
 
 interface Props {
 	educations: Array<Education>;
 }
 
 function Educations(props: Props) {
+	const { t } = useTranslation();
 	const { educations } = props;
 	const list = educations.map((education, i) => (
 		<TimelineItem
@@ -26,7 +28,7 @@ function Educations(props: Props) {
 	return (
 		<div id="educations" className="bg-light">
 			<Container className="py-5">
-				<h2 className="text-center mt-5 display-4">Formations</h2>
+				<h2 className="text-center mt-5 display-4">{t("educations")}</h2>
 				<hr />
 				<div className="row mt-4">
 					<div className="col-md-10 mx-auto">

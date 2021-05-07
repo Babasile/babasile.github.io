@@ -2,11 +2,13 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import { Role } from "../../interfaces/Role.interface";
 import TimelineItem from "../commons/timelineItem";
+import {useTranslation} from 'react-i18next';
 
 interface Props {
 	roles: Array<Role>;
 }
 function Roles(props: Props) {
+	const {t} = useTranslation();
 	const { roles } = props;
 	const list = roles.map((role, i) => (
 		<TimelineItem
@@ -25,7 +27,7 @@ function Roles(props: Props) {
 	return (
 		<div id="roles" className="bg-light">
 			<Container className="py-5">
-				<h2 className="text-center mt-5 display-4">Expériences</h2>
+				<h2 className="text-center mt-5 display-4">{t("roles")}</h2>
 				<hr />
 				<div className="row mt-4">
 					<div className="col-md-10 mx-auto">

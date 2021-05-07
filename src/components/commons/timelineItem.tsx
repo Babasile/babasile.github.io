@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Name } from "../../interfaces/Name.interface";
+import {useTranslation} from 'react-i18next';
 
 interface Props {
 	title: string;
@@ -15,6 +16,7 @@ interface Props {
 }
 
 function TimelineItem(props: Props) {
+	const { t } = useTranslation();
 	let details;
 	let renderDetails = props.details.map((detail, i) => (
 		<li key={i + "-d"}>{detail.name}</li>
@@ -48,7 +50,7 @@ function TimelineItem(props: Props) {
 					{props.formatDate ? formatter.format(props.startDate) + " " : ""}
 					{props.startDate.getFullYear()} -{" "}
 					{props.current
-						? "Actuellement"
+						? t("currently")
 						: formatter.format(props.endDate) +
 						  " " +
 						  props.endDate.getFullYear()}
@@ -58,7 +60,7 @@ function TimelineItem(props: Props) {
 			return (
 				<>
 					{props.startDate.getFullYear()} -{" "}
-					{props.current ? "Actuellement" : props.endDate.getFullYear()}
+					{props.current ? t("currently") : props.endDate.getFullYear()}
 				</>
 			);
 		}

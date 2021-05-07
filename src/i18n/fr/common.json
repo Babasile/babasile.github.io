@@ -1,0 +1,19 @@
+{
+  "roles": "Expériences",
+  "educations": "Formations",
+  "skills": "Compétences",
+  "hobbies": "Centres d'intérêt",
+  "currently": "Actuellement",
+  "aboutme": "A mon sujet",
+  "fewWords": "En quelques mots",
+  "head" : "Ma tête",
+  "details": "Détails",
+  "name": "Nom: ",
+  "age": "Âge: ",
+  "years": "ans",
+  "localization": "Localisation: ",
+  "extras": "Extras",
+  "contactme": "Contacter moi sur ",
+  "onrs": "Egalement présent sur ",
+  "projectOnGitHub": "Retrouver ce projet sur "
+}

@@ -10,6 +10,7 @@ import style from "./Info.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Identity } from "../../interfaces/Identity.interface";
 import { Link } from "../../interfaces/Link.interface";
+import {useTranslation} from 'react-i18next';
 
 interface Props {
 	identity: Identity;
@@ -17,6 +18,7 @@ interface Props {
 }
 
 function Info(props: Props) {
+	const { t } = useTranslation();
 	const { identity, contact } = props;
 	let renderSoftSkills = identity.softskills.map((value, i) => (
 		<Col
@@ -45,10 +47,10 @@ function Info(props: Props) {
 				<hr className="bg-light" />
 				<Row>
 					<Col md={4}>
-						<h3>A mon sujet</h3>
+						<h3>{ t("aboutme") }</h3>
 						{identity.bio}
 						<hr className="bg-light my-3" />
-						<h3>En quelques mots</h3>
+						<h3>{ t("fewWords") }</h3>
 						<Row>{renderSoftSkills}</Row>
 					</Col>
 					<Col className="text-center pt-2 pb-2" md={4}>
@@ -60,26 +62,26 @@ function Info(props: Props) {
 									? identity.picture.url
 									: defaultPicture
 							}
-							alt="Ma tête"
+							alt={ t("head") }
 							width={182}
 							height={188}
 							className="border border-warning bg-warning"
 						/>
 					</Col>
 					<Col md={4}>
-						<h3>Détails</h3>
+						<h3>{ t("details") }</h3>
 						<p>
-							<span className="font-weight-bold">Nom: </span>
+							<span className="font-weight-bold">{ t("name") }</span>
 							{identity.firstname} {identity.lastname}
 							<br />
-							<span className="font-weight-bold">Âge: </span>
-							{calculateAge(identity.birthdate)} ans
+							<span className="font-weight-bold">{ t("age") }</span>
+							{calculateAge(identity.birthdate)} { t("years") }
 							<br />
-							<span className="font-weight-bold">Localisation: </span>
+							<span className="font-weight-bold">{ t("localization") }</span>
 							{identity.address.zone}, {identity.address.country}
 						</p>
 						<hr className="bg-light" />
-						<h4>Extras</h4>
+						<h4>{ t("extras") }</h4>
 						<p>
 							{identity.additionnals[0].name}{" "}
 							<Image
@@ -100,7 +102,7 @@ function Info(props: Props) {
 							rel="noopener noreferrer"
 							className="btn btn-light btn-lg"
 						>
-							Contacter moi sur {contact.name}{" "}
+							{ t("contactme") }{contact.name}{" "}
 							<FontAwesomeIcon icon={[contact.icon.class, contact.icon.name]} />
 						</a>
 					</Col>

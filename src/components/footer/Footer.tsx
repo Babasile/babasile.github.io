@@ -8,13 +8,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "../../interfaces/Link.interface";
 
 import styles from "./Footer.module.css";
+import {useTranslation} from 'react-i18next';
+import i18n from 'i18next';
 
 interface Props {
 	links: Array<Link>;
 	contact: Link;
 }
 function Footer(props: Props) {
+	const { t } = useTranslation();
 	const { links, contact } = props;
+	let enActive = "";
+	enActive = i18n.language === "en" ? styles.langActive : "";
+	let frActive = "";
+	frActive = i18n.language === "fr" ? styles.langActive : "";
 	let rs = links.map((link, i) => (
 		<OverlayTrigger
 			key={link.name}
@@ -35,12 +42,17 @@ function Footer(props: Props) {
 			</a>
 		</OverlayTrigger>
 	));
+
+	function changeLanguage(lng: string) {
+		i18n.changeLanguage(lng);
+	}
+
 	return (
 		<footer className={styles.textColor + " bg-dark py-1 border-top border-warning"}>
 			<Container className="py-4 text-center">
 				<Row>
-					<Col md={6} className="pb-3">
-						<span>Contacter moi sur </span>
+					<Col md={6} className="pb-2">
+						<span>{ t("contactme") }</span>
 						<OverlayTrigger
 							key={contact.name}
 							placement="right"
@@ -51,7 +63,7 @@ function Footer(props: Props) {
 								aria-label={contact.name}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="text-secondary align-baseline text-light"
+								className="align-baseline text-light"
 							>
 								<FontAwesomeIcon
 									icon={[contact.icon.class, contact.icon.name]}
@@ -60,14 +72,14 @@ function Footer(props: Props) {
 							</a>
 						</OverlayTrigger>
 					</Col>
-					<Col md={6} className="pb-3">
-						<span>Egalement présent sur </span>
+					<Col md={6} className="pb-2">
+						<span>{ t("onrs" ) }</span>
 						{rs}
 					</Col>
 				</Row>
-				<Row className="pt-3">
+				<Row className="pt-2">
 					<Col xs={12}>
-						Retrouver ce projet sur{" "}
+						{ t('projectOnGitHub' ) }
 						<a
 							href="https://github.com/Babasile/babasile.github.io"
 							aria-label="GitHub repository"
@@ -77,6 +89,11 @@ function Footer(props: Props) {
 						>
 							GitHub <FontAwesomeIcon icon={["fab", "github"]} />
 						</a>
+					</Col>
+				</Row>
+				<Row className="pt-2">
+					<Col xs={12}>
+						<button className={styles.langColor + " " + frActive + " btn btn-link text-decoration-none"} onClick={() => changeLanguage('fr')}>FR</button> | <button className={styles.langColor + " " + enActive + " btn btn-link text-decoration-none"} onClick={() => changeLanguage('en')}>EN</button>
 					</Col>
 				</Row>
 			</Container>
