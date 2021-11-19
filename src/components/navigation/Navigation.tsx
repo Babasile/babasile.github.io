@@ -48,12 +48,17 @@ function Navigation(props: Props) {
 			<Navbar.Brand className="text-capitalize mr-0" href="#bio" id="me" onClick={() => setExpanded(false)}>
 				{navBrand}
 				<small
-					className={styles.subtitle + " text-capitalize pl-2 font-italic"}
+					className={styles.subtitle + " " + styles.w200 + " text-capitalize pl-2 font-italic text-wrap d-md-none"}
+				>
+					{role}
+				</small>
+				<small
+					className={styles.subtitle + " text-capitalize pl-2 font-italic d-none d-md-block"}
 				>
 					{role}
 				</small>
 			</Navbar.Brand>
-			<Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(true)} />
+			<Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
 			<Navbar.Collapse id="basic-navbar-nav">
 				<Scrollspy
 					items={spyLinks}

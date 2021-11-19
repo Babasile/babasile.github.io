@@ -2,6 +2,10 @@
 	display: block;
 }
 
+.w200 {
+	width: 200px;
+}
+
 .textColor {
 	color: #CACCCE !important;
 }
