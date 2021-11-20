@@ -1,3 +1,5 @@
+[![Build and Deploy](https://github.com/Babasile/babasile.github.io/actions/workflows/main.yml/badge.svg?branch=dev)](https://github.com/Babasile/babasile.github.io/actions/workflows/main.yml)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
