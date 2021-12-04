@@ -1,11 +1,11 @@
-import { Resume } from "../interfaces/Resume.interface";
-import { Link } from "../interfaces/Link.interface";
-import { Hobby } from "../interfaces/Hobby.interface";
-import { Education } from "../interfaces/Education.interface";
-import { Role } from "../interfaces/Role.interface";
-import { Identity } from "../interfaces/Identity.interface";
-import { Skill } from "../interfaces/Skill.interface";
-import picture from "./beardglasses.jpg";
+import { Resume } from "../../interfaces/Resume.interface";
+import { Link } from "../../interfaces/Link.interface";
+import { Hobby } from "../../interfaces/Hobby.interface";
+import { Education } from "../../interfaces/Education.interface";
+import { Role } from "../../interfaces/Role.interface";
+import { Identity } from "../../interfaces/Identity.interface";
+import { Skill } from "../../interfaces/Skill.interface";
+import picture from "../../assets/pictures/beardglasses.jpg";
 
 export class Data implements Resume {
 	identity: Identity = {
@@ -32,7 +32,7 @@ export class Data implements Resume {
 		bio:
 			"Je suis un développeur full-stack passionné. J'aime la structure, l'ordre et la qualité. J'aime passer du temps à corriger les petits détails et à optimiser les applications web. J'aime aussi travailler en équipe, pour progresser et apprendre plus vite.",
 		picture: { url: picture },
-		role: "Développeur Full-Stack",
+		role: "Ingénieur en Technologie de l'Information",
 	};
 	skills: Array<Skill> = [
 		{
@@ -64,7 +64,7 @@ export class Data implements Resume {
 		{
 			name: "IDE",
 			comment: "",
-			keywords: [{ name: "Eclipse" }, { name: "VSCode" }, { name: "DBeaver" }, { name: "WebStorm" }],
+			keywords: [{ name: "Eclipse" }, { name: "VSCode" }, { name: "DBeaver" }, { name: "IntelliJ IDEA" }, { name: "WebStorm" }],
 		},
 		{
 			name: "Langue",
@@ -83,14 +83,14 @@ export class Data implements Resume {
 			courses: [
 				{ name: "Gestion de projet" },
 				{ name: "Marketing et Communication" },
-				{ name: "Ergonomie et UX" },
+				{ name: "UI et UX" },
 				{ name: "Développement web" },
 			],
 			keywords: [
 				{ name: "Alternance" },
 				{ name: "Gestion de projet" },
 				{ name: "UX" },
-				{ name: "Ergonomie" },
+				{ name: "UI" },
 				{ name: "SEO" },
 				{ name: "E-commerce" },
 				{ name: "Javascript" },
@@ -125,9 +125,9 @@ export class Data implements Resume {
 			keywords: [
 				{ name: "Alternance" },
 				{ name: "Java" },
-				{ name: "AngularJS" },
+				{ name: "Angular" },
 				{ name: "Android" },
-				{ name: "REST API" },
+				{ name: "JEE" },
 				{ name: "Ionic" },
 				{ name: "Hibernate" },
 				{ name: "SCRUM" },
@@ -149,15 +149,29 @@ export class Data implements Resume {
 			keywords: [
 				{ name: "Java" },
 				{ name: "MySQL" },
-				{ name: "HTML" },
-				{ name: "CSS" },
+				{ name: "HTML5" },
+				{ name: "CSS3" },
 				{ name: "PHP" },
 				{ name: "Javascript" },
 				{ name: "Android" },
+				{ name: "JEE" },
 			],
 		},
 	];
 	jobs: Array<Role> = [
+		{
+			title: "Ingénieur en Technologie de l'Information",
+			company: "CGI",
+			city: "Illkirch-Graffenstaden",
+			startDate: new Date("2021-07"),
+			endDate: new Date(),
+			current: true,
+			missions: [],
+			keywords: [
+				{ name: "Java" },
+				{ name: "GIT" }
+			],
+		},
 		{
 			title: "Développeur Full-Stack",
 			company: "Transiteo",
@@ -215,6 +229,7 @@ export class Data implements Resume {
 			keywords: [
 				{ name: "Apprentissage" },
 				{ name: "Java" },
+				{ name: "JEE" },
 				{ name: "Javascript" },
 				{ name: "Eclipse" },
 				{ name: "IBM DB2" },
@@ -227,7 +242,7 @@ export class Data implements Resume {
 		{
 			name: "Développement",
 			comment:
-				"Veille technologique: React, Docker, GraphQL, Grafana, Synology, SCRUM",
+				"Veille technologique: React, Docker, GraphQL, Grafana, Synology, SCRUM, Jenkins",
 			icon: { class: "fas", name: "code" },
 		},
 		{
@@ -265,10 +280,10 @@ export class Data implements Resume {
 			icon: { class: "fab", name: "twitter" },
 		},
 		{
-			name: "Instagram",
-			pseudo: "@Baabasile",
-			url: "https://www.instagram.com/baabasile/",
-			icon: { class: "fab", name: "instagram" },
+			name: "Stack Overflow",
+			pseudo: "Babasile",
+			url: "https://stackoverflow.com/users/7416377/babasile",
+			icon: { class: "fab", name: "stack-overflow" },
 		},
 	];
 	contact: Link = {

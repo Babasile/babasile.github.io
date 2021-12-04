@@ -1,7 +1,6 @@
 import React from "react";
 import ReactGA from "react-ga";
 import "./App.css";
-import './i18n/config';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -26,7 +25,7 @@ function App() {
 	const client = new ApolloClient({
 		cache: new InMemoryCache({ addTypename: false }),
 		link: new HttpLink({
-			uri: process.env.REACT_APP_STRAPI_URL + "/graphql",
+			uri: process.env.REACT_APP_GRAPHQL_URL,
 		}),
 	});
 	library.add(fab, fas);

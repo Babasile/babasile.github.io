@@ -1,35 +1,40 @@
 import React, { useState, useEffect } from "react";
-import { Data } from "../../config/Data.class";
+import { Data as DataFr } from "../../i18n/fr/Data.class";
+import { Data as DataEn } from "../../i18n/en/Data.class";
 import { Link } from "../../interfaces/Link.interface";
 
 import Requests from "./requests.class";
 
 import Navigation from "../navigation/Navigation";
-import Educations from "../education/Education";
-import Roles from "../role/Role";
-import Skills from "../skill/Skill";
-import Hobbies from "../hobby/Hobby";
+import Educations from "../educations/Educations";
+import Roles from "../roles/Roles";
+import Skills from "../skills/Skills";
+import Hobbies from "../hobbies/Hobbies";
 import Footer from "../footer/Footer";
 import Info from "../info/Info";
 import { useQuery } from "@apollo/client";
 
 import styles from "./single-page.module.css";
 import {useTranslation} from 'react-i18next';
+import {Resume} from "../../interfaces/Resume.interface";
 
 function SinglePage() {
 	const { t, i18n } = useTranslation();
 	let locale;
+	let init;
 	if( i18n.language.toLowerCase().startsWith( "fr" ) ) {
 		locale = "fr-FR";
+		init = new DataFr();
 	} else if( i18n.language.toLowerCase().startsWith( "en" ) ) {
 		locale = "en";
+		init = new DataEn();
 	} else {
 		locale = i18n.language;
+		init = new DataEn();
 	}
-	let init = new Data();
 	let initNavLinks: Array<Link> = createNavLinks(init);
 	const [isLoading, setIsLoading] = useState<boolean>(true);
-	const [resume, setResume] = useState<Data>(init);
+	const [resume, setResume] = useState<Resume>(init);
 	const [navLinks, setNavLinks] = useState<Array<Link>>(initNavLinks);
 	const { loading, error, data } = useQuery(Requests.GET_DATA, { variables: { locale: locale } } );
 
@@ -52,46 +57,46 @@ function SinglePage() {
 		);
 	}
 
-	function createNavLinks(resume: Data): Array<Link> {
-		let navLinks: Array<Link> = [];
+	function createNavLinks(res: Resume): Array<Link> {
+		let newNavLinks: Array<Link> = [];
 
-		if (resume.identity != null) {
-			navLinks.push({
-				name: resume.identity.firstname + " " + resume.identity.lastname,
+		if (res.identity != null) {
+			newNavLinks.push({
+				name: res.identity.firstname + " " + res.identity.lastname,
 				url: "#bio",
 				icon: { class: "fas", name: "angle-right" },
 			});
 		}
-		if (resume.jobs.length > 0) {
-			navLinks.push({
-				name: t('roles') as string,
+		if (res.jobs.length > 0) {
+			newNavLinks.push({
+				name: t('roles'),
 				url: "#roles",
 				icon: { class: "fas", name: "angle-right" },
 			});
 		}
-		if (resume.educations.length > 0) {
-			navLinks.push({
-				name: t('educations') as string,
+		if (res.educations.length > 0) {
+			newNavLinks.push({
+				name: t('educations'),
 				url: "#educations",
 				icon: { class: "fas", name: "angle-right" },
 			});
 		}
-		if (resume.skills.length > 0) {
-			navLinks.push({
-				name: t('skills') as string,
+		if (res.skills.length > 0) {
+			newNavLinks.push({
+				name: t('skills'),
 				url: "#skills",
 				icon: { class: "fas", name: "angle-right" },
 			});
 		}
-		if (resume.hobbies.length > 0) {
-			navLinks.push({
-				name: t('hobbies') as string,
+		if (res.hobbies.length > 0) {
+			newNavLinks.push({
+				name: t('hobbies'),
 				url: "#hobbies",
 				icon: { class: "fas", name: "angle-right" },
 			});
 		}
 
-		return navLinks;
+		return newNavLinks;
 	}
 
 	return (
