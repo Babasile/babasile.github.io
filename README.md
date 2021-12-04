@@ -1,6 +1,6 @@
 # My resume
 
-[![Build and Deploy](https://github.com/Babasile/babasile.github.io/actions/workflows/build.yml/badge.svg?branch=dev)](https://github.com/Babasile/babasile.github.io/actions/workflows/build.yml)
+[![Build and Deploy](https://github.com/Babasile/babasile.github.io/actions/workflows/build.yml/badge.svg)](https://github.com/Babasile/babasile.github.io/actions/workflows/build.yml)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/Babasile/babasile.github.io?color=brightgreen&label=Release)](https://github.com/Babasile/babasile.github.io/releases)
 [![CodeQL Analysis](https://github.com/Babasile/babasile.github.io/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Babasile/babasile.github.io/actions/workflows/codeql-analysis.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Babasile_babasile.github.io&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Babasile_babasile.github.io)
