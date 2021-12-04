@@ -21,7 +21,7 @@ import {Resume} from "../../interfaces/Resume.interface";
 function SinglePage() {
 	const { t, i18n } = useTranslation();
 	let locale;
-	let init;
+	let init: Resume;
 	if( i18n.language.toLowerCase().startsWith( "fr" ) ) {
 		locale = "fr-FR";
 		init = new DataFr();
@@ -45,6 +45,8 @@ function SinglePage() {
 			setIsLoading(false);
 		}
 		if (error && !data) {
+			setResume(init)
+			setNavLinks(createNavLinks(init));
 			setIsLoading(false);
 		}
 	}, [loading, error, data]);
