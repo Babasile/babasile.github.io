@@ -169,7 +169,10 @@ export class Data implements Resume {
 			missions: [],
 			keywords: [
 				{ name: "Java" },
-				{ name: "GIT" }
+				{ name: "GIT" },
+				{ name: "IntelliJ IDEA" },
+				{ name: "JIRA" },
+				{ name: "Jenkins" },
 			],
 		},
 		{

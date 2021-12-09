@@ -16,7 +16,7 @@ interface Props {
 }
 
 function TimelineItem(props: Props) {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	let details;
 	let renderDetails = props.details.map((detail, i) => (
 		<li key={i + "-d"}>{detail.name}</li>
@@ -43,7 +43,7 @@ function TimelineItem(props: Props) {
 	}
 
 	function renderDate() {
-		const formatter = new Intl.DateTimeFormat("fr", { month: "long" });
+		const formatter = new Intl.DateTimeFormat(i18n.language, { month: "long" });
 		if (props.formatDate) {
 			return (
 				<>
