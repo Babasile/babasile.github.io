@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import Container from "react-bootstrap/Container";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
@@ -28,8 +29,9 @@ function Footer(props: Props) {
 			placement="right"
 			overlay={<Tooltip id={`tooltip-right`}>{link.name}</Tooltip>}
 		>
-			<a
-				href={link.url}
+			<ReactGA.OutboundLink
+				eventLabel={"Go to social media - " + link.name}
+				to={link.url}
 				target="_blank"
 				aria-label={link.name}
 				rel="noopener noreferrer"
@@ -39,7 +41,7 @@ function Footer(props: Props) {
 					icon={[link.icon.class, link.icon.name]}
 					className="size-2"
 				/>
-			</a>
+			</ReactGA.OutboundLink>
 		</OverlayTrigger>
 	));
 
@@ -58,8 +60,9 @@ function Footer(props: Props) {
 							placement="right"
 							overlay={<Tooltip id={`tooltip-right`}>{contact.name}</Tooltip>}
 						>
-							<a
-								href={contact.url}
+							<ReactGA.OutboundLink
+								eventLabel="Contact me - footer"
+								to={contact.url}
 								aria-label={contact.name}
 								target="_blank"
 								rel="noopener noreferrer"
@@ -69,7 +72,7 @@ function Footer(props: Props) {
 									icon={[contact.icon.class, contact.icon.name]}
 									className="size-2"
 								/>
-							</a>
+							</ReactGA.OutboundLink>
 						</OverlayTrigger>
 					</Col>
 					<Col md={6} className="pb-2">
@@ -80,15 +83,16 @@ function Footer(props: Props) {
 				<Row className="pt-2">
 					<Col xs={12}>
 						{ t('projectOnGitHub' ) }
-						<a
-							href="https://github.com/Babasile/babasile.github.io"
+						<ReactGA.OutboundLink
+							eventLabel="Open GitHub repository"
+							to="https://github.com/Babasile/babasile.github.io"
 							aria-label="GitHub repository"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-decoration-none align-baseline text-light"
 						>
 							GitHub <FontAwesomeIcon icon={["fab", "github"]} />
-						</a>
+						</ReactGA.OutboundLink>
 					</Col>
 				</Row>
 				<Row className="pt-2">

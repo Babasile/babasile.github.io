@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -95,15 +96,16 @@ function Info(props: Props) {
 				</Row>
 				<Row>
 					<Col xs={12} className="text-center mt-5">
-						<a
-							href={contact.url}
+						<ReactGA.OutboundLink
+							eventLabel="Contact me - Info"
+							to={contact.url}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="btn btn-light btn-lg"
 						>
 							{ t("contactme") }{contact.name}{" "}
 							<FontAwesomeIcon icon={[contact.icon.class, contact.icon.name]} />
-						</a>
+						</ReactGA.OutboundLink>
 					</Col>
 				</Row>
 			</Container>
