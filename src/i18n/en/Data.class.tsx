@@ -54,7 +54,7 @@ export class Data implements Resume {
 		{
 			name: "Database",
 			comment: "",
-			keywords: [{ name: "MySQL" }, { name: "IBM DB2" }],
+			keywords: [{ name: "MySQL" }, { name: "IBM DB2" }, { name: "PostgreSQL" }],
 		},
 		{
 			name: "Versioning",
@@ -76,7 +76,7 @@ export class Data implements Resume {
 		{
 			diploma: "Master 360 Digital",
 			school: "SupDeWeb",
-			city: "Strasbourg",
+			city: "Strasbourg, France",
 			startDate: new Date("2018"),
 			endDate: new Date("2020"),
 			current: false,
@@ -100,7 +100,7 @@ export class Data implements Resume {
 		{
 			diploma: "LP - SIL CDED",
 			school: "IUT Robert Schuman",
-			city: "Illkirch",
+			city: "Illkirch, France",
 			startDate: new Date("2016"),
 			endDate: new Date("2017"),
 			current: false,
@@ -136,7 +136,7 @@ export class Data implements Resume {
 		{
 			diploma: "DUT Informatique AS",
 			school: "IUT de Metz",
-			city: "Metz",
+			city: "Metz, France",
 			startDate: new Date("2015"),
 			endDate: new Date("2016"),
 			current: false,
@@ -160,13 +160,34 @@ export class Data implements Resume {
 	];
 	jobs: Array<Role> = [
 		{
+			title: "Web Developer Analyst",
+			company: "Les Grands Chais de France",
+			city: "Petersbach, France",
+			startDate: new Date("2022-07"),
+			endDate: new Date(),
+			current: true,
+			missions: [],
+			keywords: [
+				{ name: "Java" },
+				{ name: "Angular" },
+				{ name: "IntelliJ IDEA" },
+				{ name: "JIRA" },
+				{ name: "Git" },
+				{ name: "GitLab" },
+			],
+		},
+		{
 			title: "Information Technology Engineer",
 			company: "CGI",
 			city: "Illkirch-Graffenstaden",
 			startDate: new Date("2021-07"),
-			endDate: new Date(),
-			current: true,
-			missions: [],
+			endDate: new Date("2022-06"),
+			current: false,
+			missions: [
+				{
+					name: "Scalable maintenance and technical support on a financial management application for a global agrifood group",
+				}
+			],
 			keywords: [
 				{ name: "Java" },
 				{ name: "GIT" },

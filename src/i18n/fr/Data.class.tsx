@@ -54,7 +54,7 @@ export class Data implements Resume {
 		{
 			name: "Base de données",
 			comment: "",
-			keywords: [{ name: "MySQL" }, { name: "IBM DB2" }],
+			keywords: [{ name: "MySQL" }, { name: "IBM DB2" }, { name: "PostgreSQL" }],
 		},
 		{
 			name: "Gestion de versions",
@@ -160,13 +160,34 @@ export class Data implements Resume {
 	];
 	jobs: Array<Role> = [
 		{
+			title: "Analyste Développeur Web",
+			company: "Les Grands Chais de France",
+			city: "Petersbach",
+			startDate: new Date("2022-07"),
+			endDate: new Date(),
+			current: true,
+			missions: [],
+			keywords: [
+				{ name: "Java" },
+				{ name: "Angular" },
+				{ name: "IntelliJ IDEA" },
+				{ name: "JIRA" },
+				{ name: "Git" },
+				{ name: "GitLab" },
+			],
+		},
+		{
 			title: "Ingénieur en Technologie de l'Information",
 			company: "CGI",
 			city: "Illkirch-Graffenstaden",
 			startDate: new Date("2021-07"),
-			endDate: new Date(),
-			current: true,
-			missions: [],
+			endDate: new Date("2022-06"),
+			current: false,
+			missions: [
+				{
+					name: "Maintenance évolutive et support technique sur une application de gestion financière pour un groupe agroalimentaire mondial",
+				}
+			],
 			keywords: [
 				{ name: "Java" },
 				{ name: "GIT" },
