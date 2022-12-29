@@ -8,32 +8,7 @@ import { Skill } from "../../interfaces/Skill.interface";
 import picture from "../../assets/pictures/beardglasses.jpg";
 
 export class Data implements Resume {
-	identity: Identity = {
-		firstname: "Basile",
-		lastname: "Buchler",
-		birthdate: new Date("1993-08-26"),
-		address: {
-			number: "",
-			street: "",
-			city: "",
-			zip: "",
-			country: "France",
-			state: "Grand Est",
-			zone: "Dans les environs de Strasbourg",
-		},
-		phoneNumber: "",
-		email: "",
-		additionnals: [{ name: "Permis B, véhiculé" }],
-		softskills: [
-			{ name: "Curieux" },
-			{ name: "Rigoureux" },
-			{ name: "Travail d'équipe" },
-		],
-		bio:
-			"Je suis un développeur full-stack passionné. J'aime la structure, l'ordre et la qualité. J'aime passer du temps à corriger les petits détails et à optimiser les applications web. J'aime aussi travailler en équipe, pour progresser et apprendre plus vite.",
-		picture: { url: picture },
-		role: "Ingénieur en Technologie de l'Information",
-	};
+
 	skills: Array<Skill> = [
 		{
 			name: "Programmation",
@@ -314,5 +289,32 @@ export class Data implements Resume {
 		name: "Linkedin",
 		url: "https://www.linkedin.com/in/basilebuchler/",
 		icon: { class: "fab", name: "linkedin" },
+	};
+
+	identity: Identity = {
+		firstname: "Basile",
+		lastname: "Buchler",
+		birthdate: new Date("1993-08-26"),
+		address: {
+			number: "",
+			street: "",
+			city: "",
+			zip: "",
+			country: "France",
+			state: "Grand Est",
+			zone: "Dans les environs de Strasbourg",
+		},
+		phoneNumber: "",
+		email: "",
+		additionnals: [{ name: "Permis B, véhiculé" }],
+		softskills: [
+			{ name: "Curieux" },
+			{ name: "Rigoureux" },
+			{ name: "Travail d'équipe" },
+		],
+		bio:
+			"Je suis un développeur full-stack passionné. J'aime la structure, l'ordre et la qualité. J'aime passer du temps à corriger les petits détails et à optimiser les applications web. J'aime aussi travailler en équipe, pour progresser et apprendre plus vite.",
+		picture: { url: picture },
+		role: this.jobs[0].title,
 	};
 }

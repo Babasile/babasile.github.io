@@ -8,32 +8,7 @@ import { Skill } from "../../interfaces/Skill.interface";
 import picture from "../../assets/pictures/beardglasses.jpg";
 
 export class Data implements Resume {
-	identity: Identity = {
-		firstname: "Basile",
-		lastname: "Buchler",
-		birthdate: new Date("1993-08-26"),
-		address: {
-			number: "",
-			street: "",
-			city: "",
-			zip: "",
-			country: "France",
-			state: "Grand Est",
-			zone: "In the area of Strasbourg",
-		},
-		phoneNumber: "",
-		email: "",
-		additionnals: [{ name: "Driving licence, with vehicle" }],
-		softskills: [
-			{ name: "Curious" },
-			{ name: "Rigorous" },
-			{ name: "Teamwork" },
-		],
-		bio:
-			"I am a passionate full-stack developer. I like structure, order and quality. I like to spend time fixing small details and optimizing web applications. I also like to work in a team, to progress and learn faster.",
-		picture: { url: picture },
-		role: "Information Technology Engineer",
-	};
+
 	skills: Array<Skill> = [
 		{
 			name: "Programming",
@@ -314,5 +289,32 @@ export class Data implements Resume {
 		name: "Linkedin",
 		url: "https://www.linkedin.com/in/basilebuchler/",
 		icon: { class: "fab", name: "linkedin" },
+	};
+
+	identity: Identity = {
+		firstname: "Basile",
+		lastname: "Buchler",
+		birthdate: new Date("1993-08-26"),
+		address: {
+			number: "",
+			street: "",
+			city: "",
+			zip: "",
+			country: "France",
+			state: "Grand Est",
+			zone: "In the area of Strasbourg",
+		},
+		phoneNumber: "",
+		email: "",
+		additionnals: [{ name: "Driving licence, with vehicle" }],
+		softskills: [
+			{ name: "Curious" },
+			{ name: "Rigorous" },
+			{ name: "Teamwork" },
+		],
+		bio:
+			"I am a passionate full-stack developer. I like structure, order and quality. I like to spend time fixing small details and optimizing web applications. I also like to work in a team, to progress and learn faster.",
+		picture: { url: picture },
+		role: this.jobs[0].title,
 	};
 }
