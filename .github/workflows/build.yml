@@ -38,6 +38,7 @@ jobs:
           CI: false
           REACT_APP_GRAPHQL_URL: ${{secrets.REACT_APP_GRAPHQL_URL}}
           REACT_APP_UA_GOOGLE_PROPERTY: ${{secrets.REACT_APP_UA_GOOGLE_PROPERTY}}
+          GENERATE_SOURCEMAP: false
 
       - name: Test 🔎
         run: npm run test
